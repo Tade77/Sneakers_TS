@@ -1,0 +1,25 @@
+nav {
+  border-bottom: 2px solid #f6f6f7;
+  padding: 1.5rem 0;
+}
+.nav--group {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  gap: 5rem;
+}
+.navs > a {
+  margin-left: 2rem;
+  text-decoration: none;
+}
+.cart--avatar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+  margin-top: -30px;
+}
+.avatar {
+  height: 40px;
+  width: 40px;
+}
