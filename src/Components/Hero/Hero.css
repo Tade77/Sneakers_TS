@@ -27,20 +27,22 @@
 .call--action {
   display: flex;
   flex-direction: column;
-  /* justify-content: flex-start; */
   align-items: flex-start;
 }
 .name {
+  margin-bottom: -20px;
   color: #e5a877;
+  font-weight: 800;
 }
 .header {
   color: #1b1f24;
   font-weight: 700;
   font-size: 32px;
-  margin-bottom: 30px;
+  margin-bottom: -3px;
 }
 
 .desc {
+  margin-top: 35px;
   width: 600px;
   text-align: justify;
 }
@@ -78,4 +80,29 @@
   padding: 10px 10px;
   background-color: #f7f8fd;
   /* border: 1px solid #f2a96a; */
+}
+.btn {
+  position: relative;
+  background-color: #ff7d1b;
+  border: none;
+  color: white;
+  padding: 15px 80px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart--logo {
+  position: absolute;
+  left: 40px;
+  top: 13px;
+}
+.select {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
 }

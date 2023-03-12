@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Hero.css";
 const HeroPage = () => {
+  const [display, setDisplay] = useState(3);
   const products = [
     "/image-product-1-thumbnail.jpg",
     "/image-product-2-thumbnail.jpg",
     "/image-product-3-thumbnail.jpg",
     "/image-product-4-thumbnail.jpg",
   ];
+  const handleAdd = () => {
+    setDisplay((currentValue) => currentValue + 1);
+  };
+  const handleMinus = () => {
+    setDisplay((current) => current - 1);
+  };
 
   return (
     <div className="pro-wrapper">
@@ -32,10 +39,18 @@ const HeroPage = () => {
           $125 <span className="rating">50%</span>
           <p className="bf--price">$250</p>
         </p>
-        <div className="counter">
-          <img src="/public/icon-minus.svg" alt="" />
-          <p className="display">0</p>
-          <img src="/public/icon-plus.svg" alt="" />
+        <div className="select">
+          <div className="counter">
+            <img onClick={handleMinus} src="/icon-minus.svg" alt="" />
+            <p className="display">{display}</p>
+            <img onClick={handleAdd} src="/icon-plus.svg" alt="" />
+          </div>
+          <div className="wrap">
+            <button className="btn">
+              <img className="cart--logo" src="/icon-cart.svg" alt="" />
+              Add to cart
+            </button>
+          </div>
         </div>
       </aside>
     </div>
