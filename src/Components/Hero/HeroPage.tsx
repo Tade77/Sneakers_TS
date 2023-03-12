@@ -9,7 +9,7 @@ const HeroPage = () => {
   ];
 
   return (
-    <div>
+    <div className="pro-wrapper">
       <aside className="product">
         <img className="product--img" src="/image-product-1.jpg" alt="" />
         <div className="img-thumb">
@@ -17,6 +17,21 @@ const HeroPage = () => {
             <img className="thumb" src={product} />
           ))}
         </div>
+      </aside>
+      <aside className="call--action">
+        <p className="name">SNEAKER COMPANY</p>
+        <p className="header">Fall Limited Edition</p>
+        <span className="header">Sneaker</span>
+        <p className="desc">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt
+          architecto facere est error ratione incidunt a soluta adipisci fuga
+          quaerat quia voluptate tempora doloremque alias atque, eveniet quam
+          modi earum!
+        </p>
+        <p className="price">
+          $125 <span className="rating">50%</span>
+        </p>
+        <p className="bf--price">$250</p>
       </aside>
     </div>
   );
