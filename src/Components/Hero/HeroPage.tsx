@@ -30,8 +30,13 @@ const HeroPage = () => {
         </p>
         <p className="price">
           $125 <span className="rating">50%</span>
+          <p className="bf--price">$250</p>
         </p>
-        <p className="bf--price">$250</p>
+        <div className="counter">
+          <img src="/public/icon-minus.svg" alt="" />
+          <p className="display">0</p>
+          <img src="/public/icon-plus.svg" alt="" />
+        </div>
       </aside>
     </div>
   );
