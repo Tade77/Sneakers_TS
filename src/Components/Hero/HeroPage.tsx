@@ -1,27 +1,16 @@
 import React, { useState } from "react";
 import "./Hero.css";
-const HeroPage = () => {
-  const [display, setDisplay] = useState(3);
-  const products = [
-    "/image-product-1-thumbnail.jpg",
-    "/image-product-2-thumbnail.jpg",
-    "/image-product-3-thumbnail.jpg",
-    "/image-product-4-thumbnail.jpg",
-  ];
-  const handleAdd = () => {
-    setDisplay((currentValue) => currentValue + 1);
-  };
-  const handleMinus = () => {
-    setDisplay((current) => current - 1);
-  };
+import { products } from "../../Data";
+const WomenCollection = () => {
+  const [display, setDisplay] = useState(0);
 
   return (
     <div className="pro-wrapper">
       <aside className="product">
         <img className="product--img" src="/image-product-1.jpg" alt="" />
         <div className="img-thumb">
-          {products.map((product) => (
-            <img className="thumb" src={product} />
+          {products.map((product, id) => (
+            <img key={id} className="thumb" src={product} />
           ))}
         </div>
       </aside>
@@ -36,14 +25,16 @@ const HeroPage = () => {
           modi earum!
         </p>
         <p className="price">
-          $125 <span className="rating">50%</span>
-          <p className="bf--price">$250</p>
+          $125.00 <span className="rating">50%</span>
         </p>
+        <span className="bf--price">
+          <s>$250.00</s>
+        </span>
         <div className="select">
           <div className="counter">
-            <img onClick={handleMinus} src="/icon-minus.svg" alt="" />
+            <img onClick={() => ""} src="/icon-minus.svg" alt="" />
             <p className="display">{display}</p>
-            <img onClick={handleAdd} src="/icon-plus.svg" alt="" />
+            <img onClick={() => ""} src="/icon-plus.svg" alt="" />
           </div>
           <div className="wrap">
             <button className="btn">
@@ -57,4 +48,4 @@ const HeroPage = () => {
   );
 };
 
-export default HeroPage;
+export default WomenCollection;

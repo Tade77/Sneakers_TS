@@ -7,21 +7,22 @@ const NavBar = () => {
       color: isActive ? "#ff7d1b" : "black",
     };
   };
+
   const navitems = [
     {
       id: 1,
-      name: "Home",
+      name: "Collection",
       path: "/",
     },
     {
       id: 2,
-      name: "News",
-      path: "/news",
+      name: "Men",
+      path: "/men",
     },
     {
       id: 3,
-      name: "Jobs",
-      path: "/jobs",
+      name: "Women",
+      path: "/women",
     },
     {
       id: 4,
