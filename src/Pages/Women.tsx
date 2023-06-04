@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "../Components/Navs/NavBar";
-import WomenCollection from "../Components/Hero/HeroPage";
+import WomenCollection from "../Components/Women/WomenCollection";
 
 const Women = () => {
   return (

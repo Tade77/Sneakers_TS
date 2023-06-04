@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import "./Hero.css";
+import "./wCollection.css";
 import { products } from "../../Data";
+import { Link } from "react-router-dom";
+
 const WomenCollection = () => {
   const [display, setDisplay] = useState(0);
 
@@ -10,7 +12,9 @@ const WomenCollection = () => {
         <img className="product--img" src="/image-product-1.jpg" alt="" />
         <div className="img-thumb">
           {products.map((product, id) => (
-            <img key={id} className="thumb" src={product} />
+            <Link to={`/women/${product.id}`}>
+              <img key={id} className="thumb" src={product.image} />
+            </Link>
           ))}
         </div>
       </aside>

@@ -49,8 +49,8 @@ const NavBar = () => {
         </div>
       </div>
       <div className="cart--avatar">
-        <img className="cart" src="/public/icon-cart.svg" alt="" />
-        <img className="avatar" src="/public/image-avatar.png" alt="" />
+        <img className="cart" src="/icon-cart.svg" alt="" />
+        <img className="avatar" src="/image-avatar.png" alt="" />
       </div>
     </nav>
   );
