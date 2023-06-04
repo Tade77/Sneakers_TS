@@ -2,18 +2,22 @@ import React, { useState } from "react";
 import "./wCollection.css";
 import { products } from "../../Data";
 import { Link } from "react-router-dom";
+import { modalType, productsType } from "../../type";
 
-const WomenCollection = () => {
-  const [display, setDisplay] = useState(0);
-
+const WomenCollection = ({ setOpenModal, openModal }: modalType) => {
   return (
-    <div className="pro-wrapper">
+    <div className={"pro-wrapper"}>
       <aside className="product">
         <img className="product--img" src="/image-product-1.jpg" alt="" />
         <div className="img-thumb">
-          {products.map((product, id) => (
+          {products.map((product: productsType) => (
             <Link to={`/women/${product.id}`}>
-              <img key={id} className="thumb" src={product.image} />
+              <img
+                key={product.id}
+                className="thumb"
+                onClick={() => setOpenModal(true)}
+                src={product.image}
+              />
             </Link>
           ))}
         </div>
@@ -37,7 +41,7 @@ const WomenCollection = () => {
         <div className="select">
           <div className="counter">
             <img onClick={() => ""} src="/icon-minus.svg" alt="" />
-            <p className="display">{display}</p>
+            <p className="display">{""}</p>
             <img onClick={() => ""} src="/icon-plus.svg" alt="" />
           </div>
           <div className="wrap">

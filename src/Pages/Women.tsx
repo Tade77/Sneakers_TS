@@ -1,11 +1,15 @@
 import React from "react";
-import NavBar from "../Components/Navs/NavBar";
 import WomenCollection from "../Components/Women/WomenCollection";
+import { modalType } from "../type";
 
-const Women = () => {
+const Women = ({ setOpenModal, openModal }: modalType) => {
   return (
     <div>
-      <WomenCollection />
+      <WomenCollection
+        setOpenModal={setOpenModal}
+        openModal={openModal}
+        children={undefined}
+      />
     </div>
   );
 };

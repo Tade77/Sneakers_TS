@@ -11,14 +11,24 @@ import Contact from "./Pages/Contact";
 import Preview from "./Components/Preview";
 
 function App() {
+  const [openModal, setOpenModal] = useState(false);
+
   return (
     <div className="App">
       <NavBar />
       <Routes>
         <Route index path="/" element={<Collection />} />
         <Route path="/men" element={<Men />} />
-        <Route path="/women" element={<Women />} />
-        <Route path="/women/:imgId" element={<Preview />} />
+        <Route
+          path="/women"
+          element={<Women openModal={openModal} setOpenModal={setOpenModal} />}
+        />
+        <Route
+          path="/women/:imgId"
+          element={
+            <Preview openModal={openModal} setOpenModal={setOpenModal} />
+          }
+        />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
