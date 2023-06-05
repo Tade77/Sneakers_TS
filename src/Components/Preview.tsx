@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { products } from "../Data";
 import { modalType, productsType } from "../type";
 import Modal from "./Modal/Modal";
@@ -9,6 +9,7 @@ const Preview = ({ openModal, setOpenModal }: modalType) => {
   const [image, setImage] = useState("");
   const [price, setPrice] = useState("");
   const { imgId } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const viewImg = products.find(
@@ -21,8 +22,18 @@ const Preview = ({ openModal, setOpenModal }: modalType) => {
     <div>
       {openModal && (
         <Modal>
-          <div className="modal" onClick={() => setOpenModal(false)}>
-            <img style={{}} src={image} />
+          <div className="modal">
+            <div className="cancel--btn">
+              <img
+                onClick={() => navigate("/women")}
+                src="/public/iconmonstr-x-mark-lined.svg"
+                alt=""
+              />
+            </div>
+            <img
+              style={{ borderRadius: "5px", height: "250px", width: "250px" }}
+              src={image}
+            />
           </div>
           <h2>{price}</h2>
         </Modal>

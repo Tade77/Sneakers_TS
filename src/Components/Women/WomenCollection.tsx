@@ -5,6 +5,11 @@ import { Link } from "react-router-dom";
 import { modalType, productsType } from "../../type";
 
 const WomenCollection = ({ setOpenModal, openModal }: modalType) => {
+  const [items, setItems] = useState([]);
+  const [count, setCount] = useState(0);
+
+  const handleAdd = () => {};
+
   return (
     <div className={"pro-wrapper"}>
       <aside className="product">
@@ -41,7 +46,7 @@ const WomenCollection = ({ setOpenModal, openModal }: modalType) => {
         <div className="select">
           <div className="counter">
             <img onClick={() => ""} src="/icon-minus.svg" alt="" />
-            <p className="display">{""}</p>
+            <p className="display">{count}</p>
             <img onClick={() => ""} src="/icon-plus.svg" alt="" />
           </div>
           <div className="wrap">

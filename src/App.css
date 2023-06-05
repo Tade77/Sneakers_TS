@@ -6,3 +6,11 @@
 .modal {
   margin-top: 200px;
 }
+.cancel--btn {
+  position: absolute;
+  left: 50rem;
+  top: 170px;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
