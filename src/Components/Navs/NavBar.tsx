@@ -32,7 +32,7 @@ const NavBar = ({ openCart, setOpenCart }: cartModalType) => {
           src="/icon-cart.svg"
           alt=""
         />
-        <p className="bagde"></p>
+        <p className="bagde">3</p>
         <img className="avatar" src="/image-avatar.png" alt="" />
       </div>
       {openCart && <CartModal setOpenCart={setOpenCart} openCart={false} />}

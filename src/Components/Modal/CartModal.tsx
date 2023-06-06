@@ -29,7 +29,7 @@ const CartModal = ({ openCart, setOpenCart }: cartModalType) => {
         <div>
           <p style={{ color: "#696a6e" }}>Full limited edition sneaker</p>
           <p style={{ color: "#696a6e" }}>
-            $125.00 x3{" "}
+            $125.00 x3
             <span style={{ fontWeight: 700, color: "black" }}>$375</span>
           </p>
         </div>
