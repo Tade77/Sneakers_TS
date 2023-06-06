@@ -26,7 +26,7 @@ const Preview = ({ openModal, setOpenModal }: modalType) => {
             <div className="cancel--btn">
               <img
                 onClick={() => navigate("/women")}
-                src="/public/iconmonstr-x-mark-lined.svg"
+                src="/iconmonstr-x-mark-lined.svg"
                 alt=""
               />
             </div>
@@ -35,7 +35,7 @@ const Preview = ({ openModal, setOpenModal }: modalType) => {
               src={image}
             />
           </div>
-          <h2>{price}</h2>
+          <h2 style={{ color: "#fff" }}>{price}</h2>
         </Modal>
       )}
     </div>

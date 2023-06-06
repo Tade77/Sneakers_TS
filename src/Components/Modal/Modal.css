@@ -9,3 +9,14 @@
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.5);
 }
+.cart--modal {
+  position: absolute;
+  top: 100px;
+  right: 90px;
+  height: 230px;
+  width: 450px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 15px 15px 15px #f6f6f7;
+  cursor: pointer;
+}

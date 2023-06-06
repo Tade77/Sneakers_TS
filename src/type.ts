@@ -13,3 +13,7 @@ export type modalType = {
   openModal: boolean;
   setOpenModal: (value: boolean) => void;
 };
+export type cartModalType = {
+  openCart: boolean;
+  setOpenCart: (value: boolean) => void;
+};

@@ -1,41 +1,18 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./navStyle.css";
-const NavBar = () => {
+import CartModal from "../Modal/CartModal";
+import { cartModalType } from "../../type";
+import { navitems } from "../../Data";
+const NavBar = ({ openCart, setOpenCart }: cartModalType) => {
   const activeStyle = ({ isActive }: any) => {
     return {
       color: isActive ? "#ff7d1b" : "black",
     };
   };
 
-  const navitems = [
-    {
-      id: 1,
-      name: "Collection",
-      path: "/",
-    },
-    {
-      id: 2,
-      name: "Men",
-      path: "/men",
-    },
-    {
-      id: 3,
-      name: "Women",
-      path: "/women",
-    },
-    {
-      id: 4,
-      name: "About",
-      path: "/about",
-    },
-    {
-      name: "Contact",
-      path: "/contact",
-    },
-  ];
   return (
-    <nav>
+    <nav className={`openCart ? "cart--modal: "" `}>
       <div className="nav--group">
         <div className="logo">
           <img src="/logo.svg" alt="" />
@@ -49,9 +26,16 @@ const NavBar = () => {
         </div>
       </div>
       <div className="cart--avatar">
-        <img className="cart" src="/icon-cart.svg" alt="" />
+        <img
+          onClick={() => setOpenCart(true)}
+          className="cart"
+          src="/icon-cart.svg"
+          alt=""
+        />
+        <p className="bagde"></p>
         <img className="avatar" src="/image-avatar.png" alt="" />
       </div>
+      {openCart && <CartModal setOpenCart={setOpenCart} openCart={false} />}
     </nav>
   );
 };

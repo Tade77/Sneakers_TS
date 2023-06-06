@@ -22,3 +22,30 @@ export const products: productsType[] = [
     price: "#45,000",
   },
 ];
+
+export const navitems = [
+  {
+    id: 1,
+    name: "Collection",
+    path: "/",
+  },
+  {
+    id: 2,
+    name: "Men",
+    path: "/men",
+  },
+  {
+    id: 3,
+    name: "Women",
+    path: "/women",
+  },
+  {
+    id: 4,
+    name: "About",
+    path: "/about",
+  },
+  {
+    name: "Contact",
+    path: "/contact",
+  },
+];

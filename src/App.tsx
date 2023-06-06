@@ -12,10 +12,12 @@ import Preview from "./Components/Preview";
 
 function App() {
   const [openModal, setOpenModal] = useState(false);
+  const [items, setItems] = useState([]);
+  const [openCart, setOpenCart] = useState(false);
 
   return (
     <div className="App">
-      <NavBar />
+      <NavBar openCart={openCart} setOpenCart={setOpenCart} />
       <Routes>
         <Route index path="/" element={<Collection />} />
         <Route path="/men" element={<Men />} />
