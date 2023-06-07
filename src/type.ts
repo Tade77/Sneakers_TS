@@ -17,3 +17,9 @@ export type cartModalType = {
   openCart: boolean;
   setOpenCart: (value: boolean) => void;
 };
+export type collectionsType = {
+  id: string;
+  name: string;
+  image: string;
+  price: string;
+};
