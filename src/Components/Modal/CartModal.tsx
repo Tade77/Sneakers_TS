@@ -22,7 +22,7 @@ const CartModal = ({ openCart, setOpenCart }: cartModalType) => {
         <div>
           <img
             style={{ height: "50px", width: "50px", borderRadius: "5px" }}
-            src="/public/image-product-1-thumbnail.jpg"
+            src="/image-product-1-thumbnail.jpg"
             alt=""
           />
         </div>
@@ -34,7 +34,7 @@ const CartModal = ({ openCart, setOpenCart }: cartModalType) => {
           </p>
         </div>
         <div>
-          <img src="/public/icon-delete.svg" alt="" />
+          <img src="/icon-delete.svg" alt="" />
         </div>
       </div>
 

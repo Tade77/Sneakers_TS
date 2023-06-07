@@ -108,3 +108,22 @@
   align-items: center;
   gap: 1rem;
 }
+.prev {
+  position: absolute;
+  left: 38%;
+  top: 53%;
+}
+.prev--img,
+.next--img {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  background-color: #c5c8cf;
+  cursor: pointer;
+}
+
+.next {
+  position: absolute;
+  left: 60%;
+  top: 53%;
+}
