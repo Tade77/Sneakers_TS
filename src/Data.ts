@@ -113,31 +113,31 @@ export const collections = [
   {
     id: "11",
     name: "White Black Kyle Graphic Print Italian Leather ",
-    image: "/Women/White Black Kyle Graphic Print Italian Leather .jpg",
+    image: "/public/Women/female.jpeg",
     price: "#22,500",
   },
   {
     id: "12",
-    name: "Blue Arden Studded Velour Italian Leather Unisex ",
-    image: "/Women/Blue Arden Studded Velour Italian Leather Unisex .jpg",
+    name: "White Arden Studded Velour Italian Leather Unisex ",
+    image: "/public/Women/fs.jpeg",
     price: "#62,000",
   },
   {
     id: "13",
-    name: "Yellow April Studded Suede Tuscany Leather ",
-    image: "/Women/Yellow April Studded Suede Tuscany Leather .jpg",
+    name: "Black April Studded Suede Tuscany Leather ",
+    image: "/public/Women/Women Cotton Warm Sneakers.jpg",
     price: "#65,200",
   },
   {
     id: "14",
     name: "Lilac Rory Studded Velour Italian Leather Unisex ",
-    image: "/Women/Lilac Rory Studded Velour Italian Leather Unisex .jpg",
+    image: "/public/Women/fs.jpeg",
     price: "#73,200",
   },
   {
     id: "15",
     name: "Women Breathable Mesh Sneakers",
-    image: "/public/Women/Women Breathable Mesh Sneakers.jpg",
+    image: "/public/Women/Woman Flat Leopard Sneakers.webp",
     price: "#35,000",
   },
   {
@@ -155,7 +155,7 @@ export const collections = [
   {
     id: "18",
     name: "Gray Ozie Graphic Print Italian Leather Unisex Sneakers",
-    image: "/Women/Gray Ozie Graphic Print Italian Leather Unisex Sneakers.jpg",
+    image: "/public/Women/female.jpeg",
     price: "#44,000",
   },
   {

@@ -9,6 +9,7 @@ import Men from "./Pages/Men";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Preview from "./Components/Preview";
+import SneakerDetails from "./Components/SneakerDetails";
 
 function App() {
   const [openModal, setOpenModal] = useState(false);
@@ -20,6 +21,7 @@ function App() {
       <NavBar openCart={openCart} setOpenCart={setOpenCart} />
       <Routes>
         <Route index path="/" element={<Collection />} />
+        <Route index path="/:sneakId" element={<SneakerDetails />} />
         <Route path="/men" element={<Men />} />
         <Route
           path="/women"
