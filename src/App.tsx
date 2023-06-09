@@ -10,6 +10,7 @@ import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Preview from "./Components/Preview";
 import SneakerDetails from "./Components/SneakerDetails";
+import OnlinePayment from "./Components/OnlinePayment";
 
 function App() {
   const [openModal, setOpenModal] = useState(false);
@@ -22,6 +23,7 @@ function App() {
       <Routes>
         <Route index path="/" element={<Collection />} />
         <Route index path="/:sneakId" element={<SneakerDetails />} />
+        <Route path="/online-payment" element={<OnlinePayment />} />
         <Route path="/men" element={<Men />} />
         <Route
           path="/women"

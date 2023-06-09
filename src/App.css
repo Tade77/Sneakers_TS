@@ -53,6 +53,7 @@
   border-radius: 8px;
   cursor: pointer;
 }
+/* SneakersDetails*/
 .view--product {
   display: flex;
   justify-content: center;
@@ -88,6 +89,7 @@
   flex-direction: column;
   gap: 3rem;
 }
+
 .name--price {
   text-align: justify;
   margin-top: 50px;
@@ -112,4 +114,133 @@ select {
 .shoe--desc {
   height: 600px;
   width: 300px;
+}
+/* Online Payment*/
+.payment {
+  height: auto;
+  display: grid;
+  grid-template-columns: 60% 1fr;
+  border: 2px solid silver;
+}
+.paystack {
+  background-color: #ff7d1b;
+}
+.pay--option {
+  color: #fff;
+}
+.title {
+  position: absolute;
+  left: 120px;
+  top: 120px;
+  color: #fff;
+}
+li {
+  list-style: none;
+  text-decoration: none;
+  color: #fff;
+}
+.pro--list {
+  margin: 50px 85px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.paystack--btn {
+  height: 70px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.or {
+  position: relative;
+}
+.or::after {
+  /* position: absolute;
+  content: "";
+  width: 300px;
+  height: 2px;
+  background-color: red; */
+}
+.or::before {
+  /* position: absolute;
+  content: "";
+  width: 300px;
+  height: 2px;
+  background-color: green; */
+}
+/* PayStack */
+.pay--form {
+  margin-left: 125px;
+}
+.contact--form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.radio {
+  display: inline-flex;
+  gap: 10px;
+  /* margin-bottom: 10px; */
+}
+#contact,
+#country,
+#address,
+#phone {
+  padding: 5px;
+  width: 500px;
+  height: 40px;
+  background-color: #fff;
+  outline: none;
+  border: none;
+}
+.payStack-container {
+  margin-bottom: 50px;
+}
+.bio {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+}
+#fname,
+#lname {
+  padding: 5px;
+  width: 235px;
+  height: 40px;
+  background-color: #fff;
+  outline: none;
+  border: none;
+}
+.province {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+#city,
+#code {
+  padding: 5px;
+  width: 147px;
+  height: 40px;
+  background-color: #fff;
+  outline: none;
+  border: none;
+}
+#state {
+  padding: 5px;
+  width: 147px;
+  height: 50px;
+  background-color: #fff;
+  outline: none;
+  border: none;
+}
+.btn-next {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.next--btn {
+  background-color: #fff;
+  padding: 20px 25px;
+  margin-right: 20px;
+  border-radius: 5px;
 }

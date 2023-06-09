@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { collections } from "../Data";
+import Collection from "../Pages/Collection";
 
 const SneakerDetails = () => {
   const [showImage, setShowImage] = useState("");
   const [showName, setShowName] = useState("");
   const [showPrice, setShowPrice] = useState("");
   const { sneakId } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const viewProduct = collections.find(
@@ -46,9 +48,15 @@ const SneakerDetails = () => {
               <option value="number">45</option>
             </select>
           </div>
+
           <div className="btns">
             <button className="btn--cart">ADD TO CART</button>
-            <button className="btn--buy">BUY NOW</button>
+            <button
+              onClick={() => navigate("/online-payment")}
+              className="btn--buy"
+            >
+              BUY NOW
+            </button>
           </div>
         </aside>
       </div>
