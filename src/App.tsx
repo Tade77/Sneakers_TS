@@ -11,6 +11,7 @@ import Contact from "./Pages/Contact";
 import Preview from "./Components/Preview";
 import SneakerDetails from "./Components/SneakerDetails";
 import OnlinePayment from "./Components/OnlinePayment";
+import Footer from "./Components/Footer";
 
 function App() {
   const [openModal, setOpenModal] = useState(false);
@@ -38,6 +39,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
