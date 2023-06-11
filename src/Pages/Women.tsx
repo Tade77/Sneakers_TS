@@ -5,11 +5,7 @@ import { modalType } from "../type";
 const Women = ({ setOpenModal, openModal }: modalType) => {
   return (
     <div>
-      <WomenCollection
-        setOpenModal={setOpenModal}
-        openModal={openModal}
-        children={undefined}
-      />
+      <WomenCollection setOpenModal={setOpenModal} openModal={openModal} />
     </div>
   );
 };

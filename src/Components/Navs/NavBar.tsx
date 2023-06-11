@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./navStyle.css";
 import CartModal from "../Modal/CartModal";
 import { cartModalType } from "../../type";
-import { navitems } from "../../Data";
+import { navItems } from "../../Data";
+import UserInfo from "../UserInfo";
 const NavBar = ({ openCart, setOpenCart }: cartModalType) => {
+  const [userModal, setUserModal] = useState(false);
   const activeStyle = ({ isActive }: any) => {
     return {
       color: isActive ? "#ff7d1b" : "black",
@@ -12,15 +14,15 @@ const NavBar = ({ openCart, setOpenCart }: cartModalType) => {
   };
 
   return (
-    <nav className={`openCart ? "cart--modal: "" `}>
+    <nav className={`openCart ? "cart--modal" : "" `}>
       <div className="nav--group">
         <div className="logo">
           <img src="/logo.svg" alt="" />
         </div>
         <div className="navs">
-          {navitems.map((navitem, id) => (
-            <NavLink to={navitem.path} key={id} style={activeStyle}>
-              {navitem.name}
+          {navItems.map((navItem, id) => (
+            <NavLink to={navItem.path} key={id} style={activeStyle}>
+              {navItem.name}
             </NavLink>
           ))}
         </div>
@@ -32,10 +34,20 @@ const NavBar = ({ openCart, setOpenCart }: cartModalType) => {
           src="/icon-cart.svg"
           alt=""
         />
-        <p className="bagde">3</p>
-        <img className="avatar" src="/image-avatar.png" alt="" />
+        <p className={`bagde`}>3</p>
+        <div className={`userModal ? "avatar--modal : ""`}>
+          <img
+            onClick={() => setUserModal(true)}
+            className="avatar"
+            src="/image-avatar.png"
+            alt=""
+          />
+        </div>
       </div>
-      {openCart && <CartModal setOpenCart={setOpenCart} openCart={false} />}
+      <div onClick={() => setUserModal(false)}>{userModal && <UserInfo />}</div>
+      <div>
+        {openCart && <CartModal setOpenCart={setOpenCart} openCart={false} />}
+      </div>
     </nav>
   );
 };

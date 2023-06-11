@@ -23,7 +23,7 @@ export const products: productsType[] = [
   },
 ];
 
-export const navitems = [
+export const navItems = [
   {
     id: 1,
     name: "Collection",
@@ -113,37 +113,37 @@ export const collections = [
   {
     id: "11",
     name: "White Black Kyle Graphic Print Italian Leather ",
-    image: "/public/Women/female.jpeg",
+    image: "/Women/female.jpeg",
     price: "#22,500",
   },
   {
     id: "12",
     name: "White Arden Studded Velour Italian Leather Unisex ",
-    image: "/public/Women/fs.jpeg",
+    image: "/Women/fs.jpeg",
     price: "#62,000",
   },
   {
     id: "13",
     name: "Black April Studded Suede Tuscany Leather ",
-    image: "/public/Women/Women Cotton Warm Sneakers.jpg",
+    image: "/Women/Women Cotton Warm Sneakers.jpg",
     price: "#65,200",
   },
   {
     id: "14",
     name: "Lilac Rory Studded Velour Italian Leather Unisex ",
-    image: "/public/Women/fs.jpeg",
+    image: "/Women/fs.jpeg",
     price: "#73,200",
   },
   {
     id: "15",
     name: "Women Breathable Mesh Sneakers",
-    image: "/public/Women/Woman Flat Leopard Sneakers.webp",
+    image: "/Women/Woman Flat Leopard Sneakers.webp",
     price: "#35,000",
   },
   {
     id: "16",
     name: "New Balance Men's 515 V3 Sneake",
-    image: "/public/Women/New Balance Men's 515 V3 Sneake.jpg",
+    image: "/Women/New Balance Men's 515 V3 Sneake.jpg",
     price: "#25,700",
   },
   {
@@ -155,7 +155,7 @@ export const collections = [
   {
     id: "18",
     name: "Gray Ozie Graphic Print Italian Leather Unisex Sneakers",
-    image: "/public/Women/female.jpeg",
+    image: "/Women/female.jpeg",
     price: "#44,000",
   },
   {
