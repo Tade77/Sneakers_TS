@@ -171,3 +171,23 @@ export const collections = [
     price: "#22,000",
   },
 ];
+export const aboutData = [
+  {
+    id: "1",
+    image: "/public/Women/sneakerPic.png",
+    article:
+      "Sneakers, also known as trainers, athletic shoes, tennis shoes,gym shoes, kicks, sport shoes, flats, running shoes, or runners, are shoes primarily designed for sports or other forms of physical exercise, but which are now also widely used for everyday casual wear.",
+  },
+  {
+    id: "1",
+    image: "/public/Women/sneakerPic.png",
+    article:
+      "Sneakers have a long and varied history. The first sneakers were made of leather and had rubber soles. They were designed to be quiet, so that athletes could sneak up on their opponents. The first sneakers were made in the United States in the early 1900s. They were originally used for sports, but they soon became popular for everyday wear.",
+  },
+  {
+    id: "1",
+    image: "/public/Women/sneakerPic.png",
+    article:
+      "Sneakers are a type of athletic shoe designed specifically for running. They are typically made with lightweight materials and have cushioned soles to provide support and comfort for the feet. Running shoes come in a variety of styles and designs, so runners can find the perfect pair for their needs.",
+  },
+];
