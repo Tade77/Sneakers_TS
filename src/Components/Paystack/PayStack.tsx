@@ -6,6 +6,7 @@ import "./PayStackStyle.css";
 
 const PayStack = () => {
   const navigate = useNavigate();
+
   return (
     <div className="payStack-container">
       <h2

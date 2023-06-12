@@ -54,6 +54,7 @@ select {
 #size {
   width: 200px;
   height: 50px;
+  border-radius: 5px;
 }
 .shoe--desc {
   height: 600px;
