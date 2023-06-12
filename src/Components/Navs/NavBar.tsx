@@ -4,7 +4,7 @@ import "./navStyle.css";
 import CartModal from "../Modal/CartModal";
 import { cartModalType } from "../../type";
 import { navItems } from "../../Data";
-import UserInfo from "../UserInfo";
+import UserInfo from "../User/UserInfo";
 const NavBar = ({ openCart, setOpenCart }: cartModalType) => {
   const [userModal, setUserModal] = useState(false);
   const activeStyle = ({ isActive }: any) => {

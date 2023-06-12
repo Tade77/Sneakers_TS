@@ -1,8 +1,8 @@
 import React from "react";
-import { collections } from "../Data";
-import { collectionsType } from "../type";
-import "../App.css";
-import { Link, useNavigate } from "react-router-dom";
+import { collections } from "../../Data";
+import { collectionsType } from "../../type";
+import "./CollectionStyle.css";
+import { useNavigate } from "react-router-dom";
 
 const Collection = () => {
   const navigate = useNavigate();

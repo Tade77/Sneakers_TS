@@ -1,7 +1,7 @@
 import React from "react";
-import "../App.css";
-import PayStack from "./PayStack";
-import { collectionsType } from "../type";
+import "./PaymentStyle.css";
+import PayStack from "../Paystack/PayStack";
+import { collectionsType } from "../../type";
 
 const progress = [
   {

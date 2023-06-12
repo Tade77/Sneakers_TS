@@ -191,3 +191,21 @@ export const aboutData = [
       "Sneakers are a type of athletic shoe designed specifically for running. They are typically made with lightweight materials and have cushioned soles to provide support and comfort for the feet. Running shoes come in a variety of styles and designs, so runners can find the perfect pair for their needs.",
   },
 ];
+export const contactData = [
+  {
+    id: "1",
+    image: "/public/Women/location.png",
+    contactText:
+      "Sneaker.com 16,Obrikom Community,Ibie road,beside Obrikom Central Mosque, River State, Nigeria",
+  },
+  {
+    id: "2",
+    image: "/public/Women/call2.png",
+    contactText: "+2348033333333",
+  },
+  {
+    id: "3",
+    image: "/public/Women/message.png",
+    contactText: "Email us: adekunletaofeeq@gmail.com",
+  },
+];

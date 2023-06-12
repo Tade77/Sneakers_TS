@@ -1,5 +1,5 @@
 import React from "react";
-import "../Components/Women/wCollection.css";
+import "./UserStyle.css";
 const UserInfo = () => {
   return (
     <div className="avatar-modal">

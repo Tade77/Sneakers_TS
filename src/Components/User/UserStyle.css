@@ -1,0 +1,46 @@
+.avatar-modal {
+  display: grid;
+  grid-template-rows: 30% 1fr;
+  gap: 50px;
+  position: absolute;
+  height: 300px;
+  width: 250px;
+  background-color: #fff;
+  right: 32px;
+  top: 90px;
+  border: 2px solid silver;
+  box-shadow: 8px 8px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.avatar-plus {
+  margin-top: 30px;
+}
+
+.user-bio {
+  line-height: 5px;
+}
+h2 {
+  color: #ff7d1b;
+}
+.mail {
+  color: silver;
+}
+.logout {
+  margin-top: 50px;
+}
+.btn--logout {
+  padding: 11px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: #ff7d1b;
+  color: #fff;
+  outline: none;
+  border: none;
+}
+.btn--logout:hover {
+  background-color: rgba(255, 0, 0, 0.8);
+}
+.sec1 {
+  background-color: #ff7d1b;
+}

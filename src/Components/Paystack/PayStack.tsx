@@ -1,7 +1,8 @@
 import React from "react";
-import Country from "./Country";
+import Country from "../Country";
 import { useNavigate } from "react-router-dom";
-import State from "./State";
+import State from "../State";
+import "./PayStackStyle.css";
 
 const PayStack = () => {
   const navigate = useNavigate();

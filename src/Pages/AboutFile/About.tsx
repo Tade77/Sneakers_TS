@@ -1,6 +1,6 @@
 import React from "react";
-import Preview from "../Components/Preview";
-import { aboutData } from "../Data";
+import "./AboutStyle.css";
+import { aboutData } from "../../Data";
 
 const About = () => {
   return (

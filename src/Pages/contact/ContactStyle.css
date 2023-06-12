@@ -1,0 +1,55 @@
+.contact--container {
+  display: grid;
+  grid-template-columns: 40% 1fr;
+}
+
+.office--info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  font-size: 18px;
+}
+.con--img {
+  height: 30px;
+  width: 30px;
+}
+.info {
+  text-align: justify;
+  width: 100px;
+}
+.contact--info {
+  background-color: #ff7d1b;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+#name,
+#email {
+  padding: 5px;
+  width: 500px;
+  height: 40px;
+  background-color: #fff;
+  outline: none;
+  border: none;
+}
+#message {
+  padding: 5px;
+  width: 500px;
+  height: 100px;
+}
+.send {
+  background-color: #fff;
+  padding: 10px 30px;
+  margin-left: 400px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.send:hover {
+  color: #fff;
+  background-color: green;
+  transition: background-color 1s ease-in-out 0.1s;
+}

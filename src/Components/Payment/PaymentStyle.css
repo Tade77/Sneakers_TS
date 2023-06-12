@@ -1,0 +1,39 @@
+.payment {
+  height: auto;
+  display: grid;
+  grid-template-columns: 60% 1fr;
+  border: 2px solid silver;
+}
+.paystack {
+  background-color: #ff7d1b;
+}
+.pay--option {
+  color: #fff;
+}
+.title {
+  position: absolute;
+  left: 120px;
+  top: 120px;
+  color: #fff;
+}
+li {
+  list-style: none;
+  text-decoration: none;
+  color: #fff;
+}
+.pro--list {
+  margin: 50px 85px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.paystack--btn {
+  height: 70px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.or {
+  position: relative;
+}

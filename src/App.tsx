@@ -4,14 +4,14 @@ import "./App.css";
 import Home from "./Pages/Women";
 import Women from "./Pages/Women";
 import NavBar from "./Components/Navs/NavBar";
-import Collection from "./Pages/Collection";
+import Collection from "./Pages/Collection/Collection";
 import Men from "./Pages/Men";
-import About from "./Pages/About";
-import Contact from "./Pages/Contact";
+import About from "./Pages/AboutFile/About";
+import Contact from "./Pages/contact/Contact";
 import Preview from "./Components/Preview";
-import SneakerDetails from "./Components/SneakerDetails";
-import OnlinePayment from "./Components/OnlinePayment";
-import Footer from "./Components/Footer";
+import SneakerDetails from "./Components/Sneakers/SneakerDetails";
+import OnlinePayment from "./Components/Payment/OnlinePayment";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   const [openModal, setOpenModal] = useState(false);

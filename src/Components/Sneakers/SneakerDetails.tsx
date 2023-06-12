@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { collections } from "../Data";
-import Collection from "../Pages/Collection";
+import { collections } from "../../Data";
+import "./SneakerStyle.css";
 
 const SneakerDetails = () => {
   const [showImage, setShowImage] = useState("");
