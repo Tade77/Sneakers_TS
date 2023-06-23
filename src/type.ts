@@ -1,11 +1,9 @@
-import { ReactNode } from "react";
-
 export type navitems = {
   name: string;
   path: string;
 };
 export type productsType = {
-  id: string;
+  id: number;
   image: string;
   price: string;
 };
@@ -17,8 +15,12 @@ export type cartModalType = {
   openCart: boolean;
   setOpenCart: (value: boolean) => void;
 };
+export type addCartType = {
+  addCart: number;
+  setAddCart: Function;
+};
 export type collectionsType = {
-  id: string;
+  id: number;
   name: string;
   image: string;
   price: string;

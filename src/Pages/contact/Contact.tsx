@@ -20,7 +20,7 @@ const Contact = () => {
         <h1 style={{ color: "#fff" }}>Contact Us</h1>
         <input type="text" placeholder="Name" id="name" required />
         <input type="email" placeholder="Email" id="email" required />
-        <textarea placeholder="message" id="message" />
+        <textarea placeholder="How can we help you?" id="message" />
         <button className="send">Send</button>
       </section>
     </div>

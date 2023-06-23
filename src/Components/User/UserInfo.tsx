@@ -1,6 +1,8 @@
 import React from "react";
 import "./UserStyle.css";
+import { useNavigate } from "react-router-dom";
 const UserInfo = () => {
+  const navigate = useNavigate();
   return (
     <div className="avatar-modal">
       <section className="sec1">
@@ -18,7 +20,9 @@ const UserInfo = () => {
           <span className="mail">johnnydoe2023@gmail.com</span>
         </div>
         <div className="logout">
-          <button className="btn--logout">Log Out</button>
+          <button onClick={() => navigate("/login")} className="btn--logout">
+            Log Out
+          </button>
         </div>
       </section>
     </div>

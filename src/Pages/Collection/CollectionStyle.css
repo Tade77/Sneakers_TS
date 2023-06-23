@@ -11,7 +11,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  height: 480px;
+  height: 550px;
   border-radius: 10px;
   background-color: #ff7d1b;
   transition: 0.5s ease;
@@ -32,7 +32,7 @@
 }
 .order {
   border: 2px solid #fff;
-  padding: 10px 50px;
+  padding: 5px 50px;
   color: #fff;
   border-radius: 8px;
   cursor: pointer;

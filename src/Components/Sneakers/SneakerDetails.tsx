@@ -8,12 +8,15 @@ const SneakerDetails = () => {
   const [showName, setShowName] = useState("");
   const [showPrice, setShowPrice] = useState("");
   const { sneakId } = useParams();
+
   const navigate = useNavigate();
 
   useEffect(() => {
     const viewProduct = collections.find(
-      (collection) => collection.id === sneakId
+      (collection) => collection.id === parseInt(sneakId)
     );
+    // console.log(viewProduct);
+
     setShowImage(viewProduct.image);
     setShowName(viewProduct.name);
     setShowPrice(viewProduct.price);

@@ -2,16 +2,20 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./navStyle.css";
 import CartModal from "../Modal/CartModal";
-import { cartModalType } from "../../type";
+import { addCartType, cartModalType } from "../../type";
 import { navItems } from "../../Data";
 import UserInfo from "../User/UserInfo";
-const NavBar = ({ openCart, setOpenCart }: cartModalType) => {
+import { useProduct } from "../Context/ProductContext";
+
+const NavBar = () => {
   const [userModal, setUserModal] = useState(false);
   const activeStyle = ({ isActive }: any) => {
     return {
       color: isActive ? "#ff7d1b" : "black",
     };
   };
+
+  const { addCart, openCart, setOpenCart } = useProduct();
 
   return (
     <nav className={`openCart ? "cart--modal" : "" `}>
@@ -34,7 +38,7 @@ const NavBar = ({ openCart, setOpenCart }: cartModalType) => {
           src="/icon-cart.svg"
           alt=""
         />
-        <p className={`bagde`}>3</p>
+        {addCart > 0 ? <p className={`badge`}>{addCart}</p> : ""}
         <div className={`userModal ? "avatar--modal : ""`}>
           <img
             onClick={() => setUserModal(true)}
@@ -45,9 +49,7 @@ const NavBar = ({ openCart, setOpenCart }: cartModalType) => {
         </div>
       </div>
       <div onClick={() => setUserModal(false)}>{userModal && <UserInfo />}</div>
-      <div>
-        {openCart && <CartModal setOpenCart={setOpenCart} openCart={false} />}
-      </div>
+      <div>{openCart && <CartModal />}</div>
     </nav>
   );
 };

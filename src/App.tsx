@@ -12,16 +12,20 @@ import Preview from "./Components/Preview";
 import SneakerDetails from "./Components/Sneakers/SneakerDetails";
 import OnlinePayment from "./Components/Payment/OnlinePayment";
 import Footer from "./Components/Footer/Footer";
+import Login from "./Pages/Home/Login";
+import SignUp from "./Pages/Register/SignUp";
 
 function App() {
   const [openModal, setOpenModal] = useState(false);
   const [items, setItems] = useState([]);
-  const [openCart, setOpenCart] = useState(false);
 
   return (
     <div className="App">
-      <NavBar openCart={openCart} setOpenCart={setOpenCart} />
+      <NavBar />
       <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/sign_up" element={<SignUp />} />
+
         <Route index path="/" element={<Collection />} />
         <Route index path="/:sneakId" element={<SneakerDetails />} />
         <Route path="/online-payment" element={<OnlinePayment />} />

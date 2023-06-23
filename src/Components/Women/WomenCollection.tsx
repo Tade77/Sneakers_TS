@@ -3,16 +3,10 @@ import "./wCollection.css";
 import { products } from "../../Data";
 import { Link } from "react-router-dom";
 import { modalType, productsType } from "../../type";
+import { useProduct } from "../Context/ProductContext";
 
 const WomenCollection = ({ setOpenModal, openModal }: modalType) => {
-  const [counts, setCounts] = useState(0);
-
-  const handleAdd = () => {
-    setCounts(counts + 1);
-  };
-  const handleMinus = () => {
-    setCounts(counts - 1);
-  };
+  const { addCart, AddToCart } = useProduct();
 
   return (
     <div className={"pro-wrapper"}>
@@ -49,9 +43,9 @@ const WomenCollection = ({ setOpenModal, openModal }: modalType) => {
         </span>
         <div className="select">
           <div className="counter">
-            <img onClick={handleMinus} src="/icon-minus.svg" alt="" />
-            <p className="display">{counts}</p>
-            <img onClick={handleAdd} src="/icon-plus.svg" alt="" />
+            <img onClick={() => ""} src="/icon-minus.svg" alt="" />
+            <p className="display">{addCart}</p>
+            <img onClick={AddToCart} src="/icon-plus.svg" alt="" />
           </div>
           <div className="wrap">
             <button className="btn">

@@ -11,7 +11,8 @@
 }
 .cart--modal {
   display: block;
-  position: absolute;
+  position: fixed;
+  z-index: 1;
   top: 100px;
   right: 90px;
   height: 230px;

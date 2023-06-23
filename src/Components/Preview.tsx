@@ -13,7 +13,7 @@ const Preview = ({ openModal, setOpenModal }: modalType) => {
 
   useEffect(() => {
     const viewImg = products.find(
-      (product: productsType) => product.id === imgId
+      (product: productsType) => product.id === parseInt(imgId)
     );
     setImage(viewImg.image);
     setPrice(viewImg.price);

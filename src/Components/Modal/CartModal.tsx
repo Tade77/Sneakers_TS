@@ -1,14 +1,21 @@
-import React from "react";
-import { cartModalType } from "../../type";
+import React, { useState } from "react";
 import "./Modal.css";
+import { useProduct } from "../Context/ProductContext";
+import { products } from "../../Data";
 
-const CartModal = ({ openCart, setOpenCart }: cartModalType) => {
+const CartModal = (id: number) => {
+  const { totalPrice, setOpenCart, addCart } = useProduct();
+
+  const displayItem = products.find((item, id) => item.id === item.id);
+
+  // if (displayItem === null) {
+  //   return null;
+  // }
   return (
     <div onClick={() => setOpenCart(false)} className="cart--modal">
       <div>
         <h1 style={{ position: "relative", left: "-160px" }}>Cart</h1>
       </div>
-      <div style={{}}></div>
       <hr />
       <div
         style={{
@@ -19,18 +26,21 @@ const CartModal = ({ openCart, setOpenCart }: cartModalType) => {
           gap: "50px",
         }}
       >
+        {}
         <div>
           <img
             style={{ height: "50px", width: "50px", borderRadius: "5px" }}
-            src="/image-product-1-thumbnail.jpg"
+            src={displayItem?.image}
             alt=""
           />
         </div>
         <div>
           <p style={{ color: "#696a6e" }}>Full limited edition sneaker</p>
           <p style={{ color: "#696a6e" }}>
-            $125.00 x3
-            <span style={{ fontWeight: 700, color: "black" }}>$375</span>
+            {displayItem?.price}x {addCart}
+            <span style={{ fontWeight: 700, color: "black" }}>
+              = {totalPrice}
+            </span>
           </p>
         </div>
         <div>
