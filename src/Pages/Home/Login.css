@@ -1,15 +1,18 @@
 .login--container {
   display: grid;
   grid-template-columns: 60% 1fr;
-  /* gap: 20px; */
+  /* border-radius: 10px; */
 }
 .login--form {
   background-color: #ff7d1b;
   padding-bottom: 50px;
   color: #fff;
+  padding-top: 50px;
 }
 .heros {
-  object-fit: cover;
+  /* object-fit: cover; */
+  height: 100%;
+  width: 100%;
 }
 .hero {
   height: 100%;

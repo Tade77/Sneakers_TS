@@ -29,11 +29,11 @@ const OnlinePayment = ({ collection }: any) => {
         <h1 className="title">PayStack</h1>
         <div className="pro--list">
           {progress.map((p, id) => (
-            <>
-              <li key={p.id}>
+            <div key={id}>
+              <li>
                 <p>{p.name}&gt;</p>
               </li>
-            </>
+            </div>
           ))}
         </div>
         <div className="pay--option">

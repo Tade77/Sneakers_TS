@@ -194,18 +194,18 @@ export const aboutData = [
 export const contactData = [
   {
     id: "1",
-    image: "/public/Women/location.png",
+    image: "/Women/location.png",
     contactText:
       "Sneaker.com 16,Obrikom Community,Ibie road,beside Obrikom Central Mosque, River State, Nigeria",
   },
   {
     id: "2",
-    image: "/public/Women/call2.png",
+    image: "/Women/call2.png",
     contactText: "+2348033333333",
   },
   {
     id: "3",
-    image: "/public/Women/message.png",
+    image: "/Women/message.png",
     contactText: "Email: adekunletaofeeq@gmail.com",
   },
 ];

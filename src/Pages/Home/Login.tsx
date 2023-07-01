@@ -1,14 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Login.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { Toast } from "react-bootstrap";
+import ToastComponent from "../../Components/Toast/ToastComponent";
+import { useProduct } from "../../Components/Context/ProductContext";
+import { pb } from "../../Pocketbase";
 
+type loginProps = {
+  email: string;
+  password: string;
+};
 const Login = () => {
+  const navigate = useNavigate();
+  // const { setToast } = useProduct();
+  const [isLoading, setIsloading] = useState(false);
+  const accountLogin = async (data: loginProps) => {
+    setIsloading(true);
+    try {
+      const authData = pb
+        .collection("user")
+        .authWithPassword(data.email, data.password);
+    } catch (error) {}
+  };
   return (
     <div className="login--container">
+      <section className="heros">
+        <img className="hero" src="/Women/banner2.jpeg" alt="" />
+      </section>
       <section className="login--form">
         <h1 className="header">Login to your account</h1>
         <p>
-          Don't have an account?{" "}
+          Don't have an account?
           <Link to={"/sign_up"}>
             <span className="link">Create an Account</span>
           </Link>
@@ -20,14 +42,12 @@ const Login = () => {
             <input type="checkbox" />
             <span>keep me logged in</span>
           </div>
-          <button className="btn--login">Login</button>
+          <button onClick={() => navigate("/")} className="btn--login">
+            Login
+          </button>
         </div>
-      </section>
-      <section className="heros">
-        <img className="hero" src="/Women/banner2.jpeg" alt="" />
       </section>
     </div>
   );
 };
-
 export default Login;

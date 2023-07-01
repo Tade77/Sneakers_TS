@@ -7,7 +7,8 @@ type productContextType = {
   setOpenCart: (value: boolean) => boolean;
   setAddCart: (value: number) => number;
   AddToCart: () => number;
-  totalPrice: number;
+  showToast: boolean;
+  setToast: (value: boolean) => boolean;
 };
 const ProductContext = createContext({} as productContextType);
 
@@ -23,12 +24,11 @@ export const ProductContextProvider = ({
 }: ProductContextProviderProps) => {
   const [openCart, setOpenCart] = useState(false);
   const [addCart, setAddCart] = useState(0);
+  const [showToast, setToast] = useState(false);
+
   const AddToCart = () => {
     setAddCart(addCart + 1);
   };
-  const totalPrice = products.reduce((accumulator, product) => {
-    return accumulator + parseFloat(product.price);
-  }, 0);
 
   const context = {
     openCart: openCart,
@@ -36,7 +36,8 @@ export const ProductContextProvider = ({
     setOpenCart: setOpenCart,
     setAddCart: setAddCart,
     AddToCart: AddToCart,
-    totalPrice: totalPrice,
+    showToast: showToast,
+    setToast: setToast,
   };
 
   return (

@@ -4,13 +4,10 @@ import { useProduct } from "../Context/ProductContext";
 import { products } from "../../Data";
 
 const CartModal = (id: number) => {
-  const { totalPrice, setOpenCart, addCart } = useProduct();
+  const { setOpenCart, addCart } = useProduct();
 
   const displayItem = products.find((item, id) => item.id === item.id);
 
-  // if (displayItem === null) {
-  //   return null;
-  // }
   return (
     <div onClick={() => setOpenCart(false)} className="cart--modal">
       <div>
@@ -38,9 +35,7 @@ const CartModal = (id: number) => {
           <p style={{ color: "#696a6e" }}>Full limited edition sneaker</p>
           <p style={{ color: "#696a6e" }}>
             {displayItem?.price}x {addCart}
-            <span style={{ fontWeight: 700, color: "black" }}>
-              = {totalPrice}
-            </span>
+            <span style={{ fontWeight: 700, color: "black" }}>= 39</span>
           </p>
         </div>
         <div>
