@@ -26,7 +26,6 @@ const SignUp = () => {
             type="password"
             placeholder="Confirm Password"
           />
-          <input className="" type="image" src="/public/" placeholder="image" />
           <button onClick={() => navigate("/login")} className="btn--login">
             Submit
           </button>

@@ -1,11 +1,17 @@
 import { ReactNode, createContext, useContext, useState } from "react";
 import { products } from "../../Data";
 
+type cartItem = {
+  id: number;
+  addCart: number;
+};
+
 type productContextType = {
+  getQuantity: (id: number) => number;
   openCart: boolean;
   addCart: number;
   setOpenCart: (value: boolean) => boolean;
-  setAddCart: (value: number) => number;
+  setAddCart: (value: number) => void;
   AddToCart: () => number;
   showToast: boolean;
   setToast: (value: boolean) => boolean;
@@ -23,14 +29,31 @@ export const ProductContextProvider = ({
   children,
 }: ProductContextProviderProps) => {
   const [openCart, setOpenCart] = useState(false);
-  const [addCart, setAddCart] = useState(0);
+  const [addCart, setAddCart] = useState<cartItem[]>([]);
   const [showToast, setToast] = useState(false);
 
-  const AddToCart = () => {
-    setAddCart(addCart + 1);
+  const getQuantity = (id: number) => {
+    return addCart.find((item) => item.id === id)?.addCart || 0;
+  };
+
+  const AddToCart = (id: number) => {
+    setAddCart((curr) => {
+      if (curr.find((item) => item.id === id) == null) {
+        return [...curr, { id, addCart: 1 }];
+      } else {
+        return curr.map((item) => {
+          if (item.id === id) {
+            return { ...item, quantity: item.addCart + 1 };
+          } else {
+            return item;
+          }
+        });
+      }
+    });
   };
 
   const context = {
+    getQuantity: getQuantity,
     openCart: openCart,
     addCart: addCart,
     setOpenCart: setOpenCart,

@@ -4,9 +4,9 @@ import { useProduct } from "../Context/ProductContext";
 import { products } from "../../Data";
 
 const CartModal = (id: number) => {
-  const { setOpenCart, addCart } = useProduct();
+  const { setOpenCart, addCart, setAddCart } = useProduct();
 
-  const displayItem = products.find((item, id) => item.id === item.id);
+  // const displayItem = products.find((item, id) => item.id === item.id);
 
   return (
     <div onClick={() => setOpenCart(false)} className="cart--modal">
@@ -25,16 +25,16 @@ const CartModal = (id: number) => {
       >
         {}
         <div>
-          <img
+          {/* <img
             style={{ height: "50px", width: "50px", borderRadius: "5px" }}
             src={displayItem?.image}
             alt=""
-          />
+          /> */}
         </div>
         <div>
           <p style={{ color: "#696a6e" }}>Full limited edition sneaker</p>
           <p style={{ color: "#696a6e" }}>
-            {displayItem?.price}x {addCart}
+            x {addCart}
             <span style={{ fontWeight: 700, color: "black" }}>= 39</span>
           </p>
         </div>
