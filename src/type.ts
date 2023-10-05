@@ -25,3 +25,7 @@ export type collectionsType = {
   image: string;
   price: string;
 };
+export type userType = {
+  email: string;
+  password: string;
+};

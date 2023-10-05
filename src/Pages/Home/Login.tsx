@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
-import { Toast } from "react-bootstrap";
-import ToastComponent from "../../Components/Toast/ToastComponent";
 import { useProduct } from "../../Components/Context/ProductContext";
 import { pb } from "../../Pocketbase";
 
@@ -11,16 +9,13 @@ type loginProps = {
   password: string;
 };
 const Login = () => {
-  const navigate = useNavigate();
-  // const { setToast } = useProduct();
-  const [isLoading, setIsloading] = useState(false);
-  const accountLogin = async (data: loginProps) => {
-    setIsloading(true);
-    try {
-      const authData = pb
-        .collection("user")
-        .authWithPassword(data.email, data.password);
-    } catch (error) {}
+  // const navigate = useNavigate();
+  const [formField, setFormField] = useState({ email: "", password: "" });
+  const { login } = useProduct();
+
+  const handleLogin = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    login(formField.email, formField.password);
   };
   return (
     <div className="login--container">
@@ -35,17 +30,33 @@ const Login = () => {
             <span className="link">Create an Account</span>
           </Link>
         </p>
-        <div className="input--group">
-          <input className="inputs" type="email" placeholder="email" />
-          <input className="inputs" type="password" placeholder="password" />
+        <form className="input--group" onSubmit={handleLogin}>
+          <input
+            className="inputs"
+            type="email"
+            placeholder="email"
+            value={formField.email}
+            onChange={(e) =>
+              setFormField({ ...formField, email: e.target.value })
+            }
+          />
+          <input
+            className="inputs"
+            type="password"
+            placeholder="password"
+            value={formField.password}
+            onChange={(e) =>
+              setFormField({ ...formField, password: e.target.value })
+            }
+          />
           <div className="check">
             <input type="checkbox" />
             <span>keep me logged in</span>
           </div>
-          <button onClick={() => navigate("/")} className="btn--login">
+          <button type="submit" className="btn--login">
             Login
           </button>
-        </div>
+        </form>
       </section>
     </div>
   );

@@ -4,7 +4,6 @@ nav {
 }
 
 .nav--group {
-  /* position: fixed; */
   display: flex;
   flex-direction: row;
   margin: 0 auto;
@@ -40,4 +39,60 @@ nav {
   background-color: rgb(245, 103, 103);
   border-radius: 50%;
   transform: translate(-55px, -15px);
+}
+.menu {
+  display: none;
+}
+
+.menu--icon {
+  display: none;
+}
+
+/* mobileView*/
+@media screen and (max-width: 1024px) {
+  .mobileView {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+  }
+  .nav--group {
+    display: none;
+  }
+  .navs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 50px;
+    margin-left: -50px;
+  }
+  .navs > a {
+    transition: 1s ease;
+  }
+  .navs > a:hover {
+    font-size: 25px;
+  }
+  .cart--avatar {
+    display: flex;
+  }
+  .menu--icon {
+    display: flex;
+    position: absolute;
+    left: 32px;
+    top: 35px;
+    object-fit: contain;
+    height: 20px;
+    width: 30px;
+  }
+  .menu {
+    display: block;
+    cursor: pointer;
+  }
+  .logo {
+    display: none;
+  }
 }

@@ -8,7 +8,7 @@ const About = () => {
       {aboutData.map((data) => (
         <div className="about--text" key={data.id}>
           <img className="about--image" src={data.image} alt="" />
-          <span>{data.article}</span>
+          <span className="articles">{data.article}</span>
         </div>
       ))}
     </div>

@@ -9,6 +9,8 @@ import { useProduct } from "../Context/ProductContext";
 
 const NavBar = () => {
   const [userModal, setUserModal] = useState(false);
+  const [mobile, setMobile] = useState(false);
+
   const activeStyle = ({ isActive }: any) => {
     return {
       color: isActive ? "#ff7d1b" : "black",
@@ -18,8 +20,11 @@ const NavBar = () => {
   const { addCart, openCart, setOpenCart } = useProduct();
 
   return (
-    <nav className={`openCart ? "cart--modal" : "" `}>
-      <div className="nav--group">
+    <nav>
+      <div
+        onClick={() => setMobile(false)}
+        className={mobile ? "mobileView" : "nav--group"}
+      >
         <div className="logo">
           <img src="/logo.svg" alt="" />
         </div>
@@ -50,6 +55,13 @@ const NavBar = () => {
       </div>
       <div onClick={() => setUserModal(false)}>{userModal && <UserInfo />}</div>
       <div>{openCart && <CartModal />}</div>
+      <div className="menu" onClick={() => setMobile(!mobile)}>
+        {mobile ? (
+          <img className="menu--icon" src="/public/icon-close.svg" alt="" />
+        ) : (
+          <img className="menu--icon" src="/public/icon-menu.svg" alt="" />
+        )}
+      </div>
     </nav>
   );
 };

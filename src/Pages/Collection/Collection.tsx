@@ -16,7 +16,7 @@ const Collection = () => {
           <img className="collection--img" src={collection.image} alt="" />
           <div className="name-price">
             <p>{collection.name}</p>
-            <h1>{collection.price}</h1>
+            <h1 className="price">{collection.price}</h1>
           </div>
           <div onClick={AddToCart}>
             <p className="order">Add to cart</p>

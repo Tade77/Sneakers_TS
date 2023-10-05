@@ -44,3 +44,36 @@ h2 {
 .sec1 {
   background-color: #ff7d1b;
 }
+
+@media screen and (max-width: 420px) {
+  .avatar-modal {
+    position: absolute;
+    height: 200px;
+    width: 170px;
+    right: 22px;
+    top: 68px;
+  }
+  .avatar-plus {
+    position: absolute;
+    left: 50px;
+    top: -10px;
+  }
+  .plus-img {
+    height: 70px;
+    width: 70px;
+  }
+
+  h2 {
+    font-size: medium;
+    margin-left: -10px;
+  }
+  .mail {
+    font-size: 12px;
+  }
+  .logout {
+    margin-top: 10px;
+  }
+  .btn--logout {
+    padding: 8px 16px;
+  }
+}

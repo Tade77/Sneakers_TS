@@ -22,3 +22,54 @@
   box-shadow: 5px 5px 2px gray;
   cursor: pointer;
 }
+.modal--header {
+  position: relative;
+  left: -160px;
+}
+.cart--wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 50px;
+}
+.checkout--btn {
+  background-color: #ff7d1b;
+  padding: 15px 150px;
+  border-radius: 10px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 420px) {
+  .cart--modal {
+    top: 70px;
+    right: 20px;
+    height: 220px;
+  }
+  .modal--header {
+    position: relative;
+    left: -160px;
+  }
+  hr {
+    margin-top: -2px;
+  }
+  p {
+    margin-top: -2px;
+    margin-left: 0px;
+  }
+}
+@media (max-width: 760px) {
+  .cart--modal {
+    width: 370px;
+  }
+  .modal--header {
+    margin-left: 50px;
+  }
+  .checkout--btn {
+    padding: 15px 120px;
+  }
+}

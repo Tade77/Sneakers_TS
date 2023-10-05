@@ -49,3 +49,20 @@
 .check {
   margin-left: -86px;
 }
+
+@media screen and (max-width: 420px) {
+  .login--container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+  }
+  .hero {
+    display: none;
+  }
+  .input--group {
+  }
+  .inputs {
+    width: 240px;
+    height: 40px;
+  }
+}

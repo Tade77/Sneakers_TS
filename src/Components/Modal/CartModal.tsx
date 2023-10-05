@@ -3,34 +3,16 @@ import "./Modal.css";
 import { useProduct } from "../Context/ProductContext";
 import { products } from "../../Data";
 
-const CartModal = (id: number) => {
+const CartModal = () => {
   const { setOpenCart, addCart, setAddCart } = useProduct();
-
-  // const displayItem = products.find((item, id) => item.id === item.id);
 
   return (
     <div onClick={() => setOpenCart(false)} className="cart--modal">
       <div>
-        <h1 style={{ position: "relative", left: "-160px" }}>Cart</h1>
+        <h1 className="modal--header">Cart</h1>
       </div>
       <hr />
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          flexDirection: "row",
-          gap: "50px",
-        }}
-      >
-        {}
-        <div>
-          {/* <img
-            style={{ height: "50px", width: "50px", borderRadius: "5px" }}
-            src={displayItem?.image}
-            alt=""
-          /> */}
-        </div>
+      <div className="cart--wrapper">
         <div>
           <p style={{ color: "#696a6e" }}>Full limited edition sneaker</p>
           <p style={{ color: "#696a6e" }}>
@@ -43,20 +25,7 @@ const CartModal = (id: number) => {
         </div>
       </div>
 
-      <button
-        style={{
-          backgroundColor: "#ff7d1b",
-          padding: "15px 150px",
-          borderRadius: "10px",
-          color: "#fff",
-          border: "none",
-          cursor: "pointer",
-          fontWeight: 500,
-          fontSize: "16px",
-        }}
-      >
-        Checkout
-      </button>
+      <button className="checkout--btn">Checkout</button>
     </div>
   );
 };
