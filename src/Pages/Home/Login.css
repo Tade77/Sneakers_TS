@@ -3,6 +3,7 @@
   grid-template-columns: 60% 1fr;
   /* border-radius: 10px; */
 }
+
 .login--form {
   background-color: #ff7d1b;
   padding-bottom: 50px;
@@ -14,10 +15,12 @@
   height: 100%;
   width: 100%;
 }
+
 .header {
   margin-bottom: 20px;
   color: #fff;
 }
+
 .input--group {
   display: flex;
   flex-direction: column;
@@ -25,6 +28,7 @@
   align-items: center;
   gap: 20px;
 }
+
 .inputs {
   padding: 5px;
   width: 240px;
@@ -34,6 +38,7 @@
   border: none;
   border-radius: 5px;
 }
+
 .btn--login {
   padding: 5px 20px;
   width: 240px;
@@ -41,8 +46,10 @@
   background-color: #fff;
   border-radius: 5px;
 }
+
 .btn--login:hover {
-  background-color: green;
+  background-color: rgba(0, 128, 0, 0.6);
+  color: #fff;
   transition: background-color 1s ease;
 }
 
@@ -56,11 +63,13 @@
     flex-direction: column;
     margin-top: 80px;
   }
+
   .hero {
     display: none;
   }
-  .input--group {
-  }
+
+  .input--group {}
+
   .inputs {
     width: 240px;
     height: 40px;

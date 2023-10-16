@@ -5,34 +5,23 @@ import "./SneakerStyle.css";
 import { useProduct } from "../Context/ProductContext";
 
 const SneakerDetails = () => {
-  const [showImage, setShowImage] = useState("");
-  const [showName, setShowName] = useState("");
-  const [showPrice, setShowPrice] = useState("");
   const { sneakId } = useParams();
-
   const navigate = useNavigate();
   const { AddToCart } = useProduct();
 
-  useEffect(() => {
-    const viewProduct: any = collections.find(
-      (collection) => collection.id === parseInt(sneakId)
-    );
-    // console.log(viewProduct);
-
-    setShowImage(viewProduct.image);
-    setShowName(viewProduct.name);
-    setShowPrice(viewProduct.price);
-  }, []);
+  const viewProduct = collections.find(
+    (collection) => collection.id === Number(sneakId)
+  );
 
   return (
     <div className="view--product">
       <div className="sneaker--img">
-        <img src={showImage} alt="" />
+        <img src={viewProduct?.image} alt="" />
       </div>
       <div className="shoe--desc">
         <aside className="name--price">
-          <h1>{showName}</h1>
-          <h2>{showPrice}</h2>
+          <h1>{viewProduct?.name}</h1>
+          <h2>{viewProduct?.price}</h2>
         </aside>
         <aside className="description">
           <div className="color-select">

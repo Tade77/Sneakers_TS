@@ -48,7 +48,7 @@ const NavBar = () => {
           <img
             onClick={() => setUserModal(true)}
             className="avatar"
-            src="/image-avatar.png"
+            src="/public/profile.png"
             alt=""
           />
         </div>

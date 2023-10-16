@@ -62,7 +62,7 @@ export const ProductContextProvider = ({
     });
   };
 
-  const login = async ({ email, password }: any) => {
+  const login = async ({ email, password }: userType) => {
     setIsLoading(true);
     try {
       setIsLoading;
@@ -72,6 +72,7 @@ export const ProductContextProvider = ({
       if (authData.record) {
         const userInfo = pb.authStore.model?.id;
         setUser(authData.record as any);
+        // navigate("/collection");
         alert("login Successful");
         setIsLoading;
         console.log(userInfo);

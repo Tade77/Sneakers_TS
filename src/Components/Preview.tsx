@@ -6,18 +6,13 @@ import Modal from "./Modal/Modal";
 import "../App.css";
 
 const Preview = ({ openModal, setOpenModal }: modalType) => {
-  const [image, setImage] = useState("");
-  const [price, setPrice] = useState("");
   const { imgId } = useParams();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const viewImg = products.find(
-      (product: productsType) => product.id === parseInt(imgId)
-    );
-    setImage(viewImg.image);
-    setPrice(viewImg.price);
-  }, []);
+  const viewImg = products.find(
+    (product: productsType) => product.id === Number(imgId)
+  );
+
   return (
     <div>
       {openModal && (
@@ -40,14 +35,14 @@ const Preview = ({ openModal, setOpenModal }: modalType) => {
             <div>
               <img
                 style={{ borderRadius: "5px", height: "300px", width: "300px" }}
-                src={image}
+                src={viewImg?.image}
               />
             </div>
             <div className="next">
               <img className="next--img" src="/public/icon-next.svg" alt="" />
             </div>
           </div>
-          <h2 style={{ color: "#fff" }}>{price}</h2>
+          <h2 style={{ color: "#fff" }}>{viewImg?.price}</h2>
         </Modal>
       )}
     </div>
