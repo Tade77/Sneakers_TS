@@ -1,7 +1,9 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useProduct } from "../../Components/Context/ProductContext";
 
 const SignUp = () => {
+  const { register } = useProduct();
   const navigate = useNavigate();
   return (
     <div className="login--container">
@@ -26,7 +28,7 @@ const SignUp = () => {
             type="password"
             placeholder="Confirm Password"
           />
-          <button onClick={() => navigate("/login")} className="btn--login">
+          <button className="btn--login" onClick={register}>
             Submit
           </button>
           <div className="toast-body"></div>

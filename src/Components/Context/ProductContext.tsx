@@ -1,4 +1,10 @@
-import { ReactNode, createContext, useContext, useState } from "react";
+import {
+  ReactNode,
+  createContext,
+  useCallback,
+  useContext,
+  useState,
+} from "react";
 import { products } from "../../Data";
 import { pb } from "../../Pocketbase";
 import { useNavigate } from "react-router-dom";
@@ -19,6 +25,12 @@ type productContextType = {
   showToast: boolean;
   setToast: (value: boolean) => boolean;
   login: (email: string, password: string) => void;
+  logout: () => void;
+  email: string;
+  password: string;
+  setEmail: (value: string) => void;
+  setPassword: (value: string) => void;
+  register: () => void;
 };
 const ProductContext = createContext({} as productContextType);
 
@@ -39,8 +51,8 @@ export const ProductContextProvider = ({
   const [addCart, setAddCart] = useState<cartItem[]>([]);
   const [showToast, setToast] = useState(false);
   const [user, setUser] = useState<userType | null>(userModel);
-
-  // const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const getQuantity = (id: number) => {
     return addCart.find((item) => item.id === id)?.addCart || 0;
@@ -61,26 +73,36 @@ export const ProductContextProvider = ({
       }
     });
   };
+  const login = useCallback(async (email: string, password: string) => {
+    console.log(email, password);
 
-  const login = async ({ email, password }: userType) => {
-    setIsLoading(true);
     try {
-      setIsLoading;
       const authData = await pb
         .collection("users")
         .authWithPassword(email, password);
-      if (authData.record) {
-        const userInfo = pb.authStore.model?.id;
-        setUser(authData.record as any);
-        // navigate("/collection");
-        alert("login Successful");
-        setIsLoading;
-        console.log(userInfo);
+      if (authData) {
+        console.log("Login successful");
       }
     } catch (error) {
-      setIsLoading;
       console.log("Something went wrong");
     }
+  }, []);
+  const logout = useCallback(() => {
+    pb.authStore.clear();
+  }, []);
+
+  // example create data
+  const register = async () => {
+    const data = {
+      fullname: "",
+      email: "",
+      mobile: "",
+      password: "",
+      passwordConfirm: "",
+    };
+
+    const record = await pb.collection("users").create(data);
+    console.log(record);
   };
 
   const context = {
@@ -93,6 +115,12 @@ export const ProductContextProvider = ({
     showToast: showToast,
     setToast: setToast,
     login: login,
+    email: email,
+    password: password,
+    setEmail: setEmail,
+    setPassword: setPassword,
+    logout: logout,
+    register: register,
   };
 
   return (

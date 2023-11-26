@@ -12,8 +12,8 @@ import Preview from "./Components/Preview";
 import SneakerDetails from "./Components/Sneakers/SneakerDetails";
 import OnlinePayment from "./Components/Payment/OnlinePayment";
 import Footer from "./Components/Footer/Footer";
-import Login from "./Pages/Home/Login";
 import SignUp from "./Pages/Register/SignUp";
+import LoginPage from "./Pages/Home/Login";
 
 function App() {
   const [openModal, setOpenModal] = useState(false);
@@ -23,11 +23,11 @@ function App() {
     <div className="App">
       <NavBar />
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<LoginPage />} />
         <Route path="/sign_up" element={<SignUp />} />
 
         <Route index path="/" element={<Collection />} />
-        <Route index path="/:sneakId" element={<SneakerDetails />} />
+        <Route path="/:sneakId" element={<SneakerDetails />} />
         <Route path="/online-payment" element={<OnlinePayment />} />
         <Route path="/men" element={<Men />} />
         <Route

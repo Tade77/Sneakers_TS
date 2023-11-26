@@ -8,14 +8,19 @@ type loginProps = {
   email: string;
   password: string;
 };
-const Login = () => {
-  // const navigate = useNavigate();
-  const [formField, setFormField] = useState({ email: "", password: "" });
-  const { login } = useProduct();
+const LoginPage = () => {
+  const [isError, setIsError] = useState(false);
+  const { login, email, password, setEmail, setPassword } = useProduct();
 
+  const navigate = useNavigate();
   const handleLogin = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    login(formField.email, formField.password);
+    try {
+      login(email, password);
+      navigate("/");
+    } catch (err) {
+      console.log("error");
+    }
   };
   return (
     <div className="login--container">
@@ -35,19 +40,15 @@ const Login = () => {
             className="inputs"
             type="email"
             placeholder="email"
-            value={formField.email}
-            onChange={(e) =>
-              setFormField({ ...formField, email: e.target.value })
-            }
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <input
             className="inputs"
             type="password"
             placeholder="password"
-            value={formField.password}
-            onChange={(e) =>
-              setFormField({ ...formField, password: e.target.value })
-            }
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
           <div className="check">
             <input type="checkbox" />
@@ -61,4 +62,4 @@ const Login = () => {
     </div>
   );
 };
-export default Login;
+export default LoginPage;

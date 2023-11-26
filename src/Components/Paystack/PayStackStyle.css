@@ -6,15 +6,18 @@
 .pay--form {
   margin-left: 125px;
 }
+
 .contact--form {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 .radio {
   display: inline-flex;
   gap: 10px;
 }
+
 #contact,
 #country,
 #address,
@@ -27,14 +30,17 @@
   border: none;
   border-radius: 5px;
 }
+
 .payStack-container {
   margin-bottom: 50px;
 }
+
 .bio {
   display: flex;
   gap: 20px;
   flex-direction: row;
 }
+
 #fname,
 #lname {
   padding: 5px;
@@ -45,11 +51,13 @@
   border: none;
   border-radius: 5px;
 }
+
 .province {
   display: flex;
   flex-direction: row;
   gap: 20px;
 }
+
 #city,
 #code {
   padding: 5px;
@@ -60,6 +68,7 @@
   border: none;
   border-radius: 5px;
 }
+
 #state {
   padding: 5px;
   width: 147px;
@@ -68,19 +77,22 @@
   outline: none;
   border: none;
 }
+
 .btn-next {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-left: 126px;
 }
+
 .next--btn {
   background-color: #fff;
   padding: 20px 25px;
-  /* margin-right: 3px; */
+  margin-right: -80px;
   border-radius: 5px;
   cursor: pointer;
 }
+
 .next--btn:hover {
   background-color: green;
   color: #fff;
