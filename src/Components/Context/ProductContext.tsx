@@ -16,21 +16,12 @@ type cartItem = {
 };
 
 type productContextType = {
-  getQuantity: (id: number) => number;
-  openCart: boolean;
-  addCart: number;
-  setOpenCart: (value: boolean) => boolean;
-  setAddCart: (value: number) => void;
-  AddToCart: () => number;
-  showToast: boolean;
-  setToast: (value: boolean) => boolean;
   login: (email: string, password: string) => void;
   logout: () => void;
   email: string;
   password: string;
   setEmail: (value: string) => void;
   setPassword: (value: string) => void;
-  register: () => void;
 };
 const ProductContext = createContext({} as productContextType);
 
@@ -44,35 +35,10 @@ type ProductContextProviderProps = {
 export const ProductContextProvider = ({
   children,
 }: ProductContextProviderProps) => {
-  const userModel = pb.authStore.model as any;
-
-  const [isLoading, setIsLoading] = useState(false);
-  const [openCart, setOpenCart] = useState(false);
-  const [addCart, setAddCart] = useState<cartItem[]>([]);
-  const [showToast, setToast] = useState(false);
-  const [user, setUser] = useState<userType | null>(userModel);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const userModel = pb.authStore.model as any;
 
-  const getQuantity = (id: number) => {
-    return addCart.find((item) => item.id === id)?.addCart || 0;
-  };
-
-  const AddToCart = (id: number) => {
-    setAddCart((curr) => {
-      if (curr.find((item) => item.id === id) == null) {
-        return [...curr, { id, addCart: 1 }];
-      } else {
-        return curr.map((item) => {
-          if (item.id === id) {
-            return { ...item, quantity: item.addCart + 1 };
-          } else {
-            return item;
-          }
-        });
-      }
-    });
-  };
   const login = useCallback(async (email: string, password: string) => {
     console.log(email, password);
 
@@ -106,21 +72,12 @@ export const ProductContextProvider = ({
   };
 
   const context = {
-    getQuantity: getQuantity,
-    openCart: openCart,
-    addCart: addCart,
-    setOpenCart: setOpenCart,
-    setAddCart: setAddCart,
-    AddToCart: AddToCart,
-    showToast: showToast,
-    setToast: setToast,
     login: login,
-    email: email,
-    password: password,
+    logout: logout,
     setEmail: setEmail,
     setPassword: setPassword,
-    logout: logout,
-    register: register,
+    email: email,
+    password: password,
   };
 
   return (

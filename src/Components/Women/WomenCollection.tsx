@@ -6,8 +6,6 @@ import { modalType, productsType } from "../../type";
 import { useProduct } from "../Context/ProductContext";
 
 const WomenCollection = ({ setOpenModal, openModal }: modalType) => {
-  const { addCart, AddToCart } = useProduct();
-
   return (
     <div className={"pro-wrapper"}>
       <aside className="product">
@@ -44,8 +42,8 @@ const WomenCollection = ({ setOpenModal, openModal }: modalType) => {
         <div className="select">
           <div className="counter">
             <img onClick={() => ""} src="/icon-minus.svg" alt="" />
-            <p className="display">{addCart}</p>
-            <img onClick={AddToCart} src="/icon-plus.svg" alt="" />
+            <p className="display">addCart</p>
+            <img src="/icon-plus.svg" alt="" />
           </div>
           <div className="wrap">
             <button className="btn">

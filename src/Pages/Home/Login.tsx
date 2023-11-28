@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { FormEvent, useState } from "react";
 import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useProduct } from "../../Components/Context/ProductContext";
@@ -9,7 +9,6 @@ type loginProps = {
   password: string;
 };
 const LoginPage = () => {
-  const [isError, setIsError] = useState(false);
   const { login, email, password, setEmail, setPassword } = useProduct();
 
   const navigate = useNavigate();

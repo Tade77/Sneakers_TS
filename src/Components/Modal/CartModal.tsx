@@ -4,8 +4,8 @@ import { useProduct } from "../Context/ProductContext";
 import { products } from "../../Data";
 
 const CartModal = () => {
-  const { setOpenCart, addCart, setAddCart } = useProduct();
-
+  const [addCart, setAddCart] = useState(0);
+  const [openCart, setOpenCart] = useState(false);
   return (
     <div onClick={() => setOpenCart(false)} className="cart--modal">
       <div>

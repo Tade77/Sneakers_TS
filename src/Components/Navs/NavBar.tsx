@@ -10,14 +10,13 @@ import { useProduct } from "../Context/ProductContext";
 const NavBar = () => {
   const [userModal, setUserModal] = useState(false);
   const [mobile, setMobile] = useState(false);
+  const [openCart, setOpenCart] = useState(false);
 
   const activeStyle = ({ isActive }: any) => {
     return {
       color: isActive ? "#ff7d1b" : "black",
     };
   };
-
-  const { addCart, openCart, setOpenCart } = useProduct();
 
   return (
     <nav>
@@ -43,7 +42,7 @@ const NavBar = () => {
           src="/icon-cart.svg"
           alt=""
         />
-        {addCart > 0 ? <p className={`badge`}>{addCart}</p> : ""}
+        <p className={`badge`}>addCart</p>
         <div className={`userModal ? "avatar--modal : ""`}>
           <img
             onClick={() => setUserModal(true)}

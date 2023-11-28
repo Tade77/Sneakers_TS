@@ -51,7 +51,7 @@ const OnlinePayment = ({ collection }: any) => {
           </div>
         </div>
         <div>
-          <PayStack collection={collection} />
+          <PayStack />
         </div>
       </section>
       <section className="pro--view"></section>
