@@ -9,6 +9,7 @@
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
 .cart--modal {
   display: block;
   position: fixed;
@@ -22,10 +23,12 @@
   box-shadow: 5px 5px 2px gray;
   cursor: pointer;
 }
+
 .modal--header {
   position: relative;
   left: -160px;
 }
+
 .cart--wrapper {
   display: flex;
   justify-content: center;
@@ -33,6 +36,7 @@
   flex-direction: row;
   gap: 50px;
 }
+
 .checkout--btn {
   background-color: #ff7d1b;
   padding: 15px 150px;
@@ -50,25 +54,31 @@
     right: 20px;
     height: 220px;
   }
+
   .modal--header {
     position: relative;
     left: -160px;
   }
+
   hr {
     margin-top: -2px;
   }
+
   p {
     margin-top: -2px;
     margin-left: 0px;
   }
 }
+
 @media (max-width: 760px) {
   .cart--modal {
     width: 370px;
   }
+
   .modal--header {
     margin-left: 50px;
   }
+
   .checkout--btn {
     padding: 15px 120px;
   }

@@ -15,7 +15,7 @@ const SneakerDetails = () => {
   return (
     <div className="view--product">
       <div className="sneaker--img">
-        <img src={viewProduct?.image} alt="" />
+        <img className="shoe--img" src={viewProduct?.image} alt="" />
       </div>
       <div className="shoe--desc">
         <aside className="name--price">

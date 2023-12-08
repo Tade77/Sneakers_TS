@@ -17,7 +17,6 @@ import LoginPage from "./Pages/Home/Login";
 
 function App() {
   const [openModal, setOpenModal] = useState(false);
-  const [items, setItems] = useState([]);
 
   return (
     <div className="App">

@@ -3,9 +3,13 @@ import { collections } from "../../Data";
 import { addCartType, collectionsType } from "../../type";
 import "./CollectionStyle.css";
 import { useNavigate } from "react-router-dom";
-import { useProduct } from "../../Components/Context/ProductContext";
 
 const Collection = () => {
+  const [addCart, setAddCart] = useState(0);
+  const handleCount = () => {
+    setAddCart((prev) => prev + 1);
+  };
+
   const navigate = useNavigate();
   return (
     <div className="collections--card">
@@ -16,7 +20,7 @@ const Collection = () => {
             <p>{collection.name}</p>
             <h1 className="price">{collection.price}</h1>
           </div>
-          <div>
+          <div onClick={() => handleCount}>
             <p className="order">Add to cart</p>
           </div>
           <div onClick={() => navigate(`/${collection.id}`)}>

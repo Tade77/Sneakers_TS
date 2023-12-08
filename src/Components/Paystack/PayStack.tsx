@@ -11,7 +11,7 @@ const PayStack = () => {
     <div className="payStack-container">
       <section>
         <h2
-          style={{ color: "white", marginBottom: "10px", marginLeft: "-290px" }}
+          style={{ color: "white", marginBottom: "10px", marginLeft: "-190px" }}
         >
           Contact
         </h2>
@@ -32,7 +32,7 @@ const PayStack = () => {
               style={{
                 color: "white",
                 marginBottom: "-10px",
-                marginLeft: "-290px",
+                marginLeft: "-190px",
               }}
             >
               Shipping Address
@@ -63,14 +63,18 @@ const PayStack = () => {
         <div className="btn-next">
           <p
             onClick={() => navigate(-1)}
-            style={{ color: "blue", cursor: "pointer" }}
+            style={{
+              cursor: "pointer",
+              marginLeft: "-70px",
+              marginTop: "10px",
+            }}
           >
             &lt; Return to cart
           </p>
-          <button className="next--btn">Continue to Shipping</button>
+          <button className="next--btn">Continue</button>
         </div>
       </section>
-      <section className="banner"></section>
+      {/* <section className="banner"></section> */}
     </div>
   );
 };

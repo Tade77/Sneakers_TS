@@ -3,11 +3,15 @@ import "./Modal.css";
 import { useProduct } from "../Context/ProductContext";
 import { products } from "../../Data";
 
-const CartModal = () => {
-  const [addCart, setAddCart] = useState(0);
-  const [openCart, setOpenCart] = useState(false);
+type cartModType = {
+  setOpenCart: (value: boolean) => void;
+};
+const CartModal = ({ setOpenCart }: cartModType) => {
   return (
-    <div onClick={() => setOpenCart(false)} className="cart--modal">
+    <div className="cart--modal">
+      <div className="close" onClick={() => setOpenCart(false)}>
+        <img src="/public/icon-close.svg" alt="" />
+      </div>
       <div>
         <h1 className="modal--header">Cart</h1>
       </div>
@@ -16,8 +20,7 @@ const CartModal = () => {
         <div>
           <p style={{ color: "#696a6e" }}>Full limited edition sneaker</p>
           <p style={{ color: "#696a6e" }}>
-            x {addCart}
-            <span style={{ fontWeight: 700, color: "black" }}>= 39</span>
+            x 5<span style={{ fontWeight: 700, color: "black" }}>= 39</span>
           </p>
         </div>
         <div>

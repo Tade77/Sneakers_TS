@@ -11,6 +11,7 @@ const NavBar = () => {
   const [userModal, setUserModal] = useState(false);
   const [mobile, setMobile] = useState(false);
   const [openCart, setOpenCart] = useState(false);
+  const [addCart, setAddCart] = useState(0);
 
   const activeStyle = ({ isActive }: any) => {
     return {
@@ -42,7 +43,7 @@ const NavBar = () => {
           src="/icon-cart.svg"
           alt=""
         />
-        <p className={`badge`}>addCart</p>
+        <p className={`badge`}>{addCart}</p>
         <div className={`userModal ? "avatar--modal : ""`}>
           <img
             onClick={() => setUserModal(true)}
@@ -53,7 +54,7 @@ const NavBar = () => {
         </div>
       </div>
       <div onClick={() => setUserModal(false)}>{userModal && <UserInfo />}</div>
-      <div>{openCart && <CartModal />}</div>
+      <div>{openCart && <CartModal setOpenCart={setOpenCart} />}</div>
       <div className="menu" onClick={() => setMobile(!mobile)}>
         {mobile ? (
           <img className="menu--icon" src="/public/icon-close.svg" alt="" />

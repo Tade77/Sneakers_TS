@@ -37,14 +37,18 @@ const OnlinePayment = ({ collection }: any) => {
           ))}
         </div>
         <div className="pay--option">
-          <p>Express Checkout</p>
-          <p>Pay with your debit card, credit card, USSD, or bank account</p>
+          <p style={{ fontSize: "22px", fontWeight: "800" }}>
+            Express Checkout
+          </p>
+          <p className="pay--info">
+            Pay with your debit card, credit card, USSD, or bank account
+          </p>
           <div className="diff">
             <p className="or">Or</p>
           </div>
           <div className="">
             <img
-              className="paystack--btn"
+              className="paypal--img"
               src="/public/Women/paypal.png"
               alt=""
             />
@@ -54,7 +58,6 @@ const OnlinePayment = ({ collection }: any) => {
           <PayStack />
         </div>
       </section>
-      <section className="pro--view"></section>
     </div>
   );
 };

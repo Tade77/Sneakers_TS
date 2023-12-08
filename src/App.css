@@ -3,9 +3,11 @@
   padding: 2rem;
   text-align: center;
 }
+
 .modal {
   margin-top: 200px;
 }
+
 .cancel--btn {
   position: absolute;
   left: 50rem;
@@ -13,6 +15,7 @@
   height: 30px;
   width: 30px;
   cursor: pointer;
+
 }
 
 /* SneakersDetails*/

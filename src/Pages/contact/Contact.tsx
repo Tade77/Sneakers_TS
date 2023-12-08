@@ -8,12 +8,10 @@ const Contact = () => {
       <section className="store--info">
         <h1>Store Information</h1>
         {contactData.map((info) => (
-          <>
-            <div key={info.id} className="office--info">
-              <img className="con--img" src={info.image} alt="" />
-              <p className="info">{info.contactText}</p>
-            </div>
-          </>
+          <div key={info.id} className="office--info">
+            <img className="con--img" src={info.image} alt="" />
+            <p className="info">{info.contactText}</p>
+          </div>
         ))}
       </section>
       <section className="contact--info">

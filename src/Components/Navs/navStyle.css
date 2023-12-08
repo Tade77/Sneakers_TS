@@ -9,10 +9,12 @@ nav {
   margin: 0 auto;
   gap: 5rem;
 }
-.navs > a {
+
+.navs>a {
   margin-left: 2rem;
   text-decoration: none;
 }
+
 .cart--avatar {
   display: flex;
   justify-content: flex-end;
@@ -26,9 +28,24 @@ nav {
   height: 40px;
   width: 40px;
 }
+
 .cart {
   cursor: pointer;
 }
+
+.cart--modal {
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  height: 30px;
+  width: 30px;
+
+}
+
 .badge {
   position: absolute;
   height: 25px;
@@ -40,6 +57,7 @@ nav {
   border-radius: 50%;
   transform: translate(-55px, -15px);
 }
+
 .menu {
   display: none;
 }
@@ -59,9 +77,11 @@ nav {
     width: 100vw;
     height: 100vh;
   }
+
   .nav--group {
     display: none;
   }
+
   .navs {
     display: flex;
     flex-direction: column;
@@ -70,15 +90,23 @@ nav {
     margin-top: 50px;
     margin-left: -50px;
   }
-  .navs > a {
+
+  .navs>a {
     transition: 1s ease;
   }
-  .navs > a:hover {
+
+  .navs>a:hover {
     font-size: 25px;
   }
+
+  .badge {
+    transform: translate(-55px, -5px);
+  }
+
   .cart--avatar {
     display: flex;
   }
+
   .menu--icon {
     display: flex;
     position: absolute;
@@ -88,10 +116,12 @@ nav {
     height: 20px;
     width: 30px;
   }
+
   .menu {
     display: block;
     cursor: pointer;
   }
+
   .logo {
     display: none;
   }
