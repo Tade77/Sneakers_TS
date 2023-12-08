@@ -13,24 +13,20 @@
 }
 
 .title {
-  position: absolute;
-  left: 120px;
-  top: 120px;
   color: #fff;
+
 }
 
 li {
   list-style: none;
   text-decoration: none;
   color: #fff;
+  margin-left: 50px;
 }
 
 .pro--list {
-  margin: 50px -150px;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  gap: 10px;
 }
 
 .paypal--img {

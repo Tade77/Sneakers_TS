@@ -11,7 +11,7 @@ const PayStack = () => {
     <div className="payStack-container">
       <section>
         <h2
-          style={{ color: "white", marginBottom: "10px", marginLeft: "-190px" }}
+          style={{ color: "white", marginBottom: "10px", marginLeft: "-350px" }}
         >
           Contact
         </h2>
@@ -32,7 +32,7 @@ const PayStack = () => {
               style={{
                 color: "white",
                 marginBottom: "-10px",
-                marginLeft: "-190px",
+                marginLeft: "-300px",
               }}
             >
               Shipping Address
@@ -67,6 +67,7 @@ const PayStack = () => {
               cursor: "pointer",
               marginLeft: "-70px",
               marginTop: "10px",
+              color: "blue",
             }}
           >
             &lt; Return to cart
