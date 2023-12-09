@@ -11,17 +11,13 @@ const PayStack = () => {
     <div className="payStack-container">
       <section>
         <h2
-          style={{ color: "white", marginBottom: "10px", marginLeft: "-350px" }}
+          style={{ color: "white", marginBottom: "10px", marginLeft: "-190px" }}
         >
           Contact
         </h2>
         <div className="pay--form">
           <div className="contact--form">
-            <input
-              type="text"
-              placeholder="email or mobile phone number"
-              id="contact"
-            />
+            <input type="text" placeholder="email" id="contact" />
             <div className="radio">
               <input type="radio" id="" />
               <span style={{ color: "#fff " }}>
@@ -32,27 +28,25 @@ const PayStack = () => {
               style={{
                 color: "white",
                 marginBottom: "-10px",
-                marginLeft: "-300px",
+                marginLeft: "-130px",
               }}
             >
               Shipping Address
             </h2>
-            <div className="shipping">
-              <Country />
+            <div className="shipping--info">
+              <div className="shipping">
+                <Country />
+              </div>
+              <div className="province">
+                <input type="text" placeholder="City" id="city" />
+                <State />
+                <input type="number" placeholder="Postal Code" id="code" />
+              </div>
+              <div>
+                <input type="text" placeholder="Phone (optional)" id="phone" />
+              </div>
             </div>
-            <div className="bio">
-              <input type="text" placeholder="First name" id="fname" />
-              <input type="text" placeholder="Last name" id="lname" />
-            </div>
-            <input type="text" placeholder="Address" id="address" />
-            <input type="text" placeholder="Apartment or suite" id="address" />
-            <div className="province">
-              <input type="text" placeholder="City" id="city" />
-              <State />
-              <input type="text" placeholder="Postal Code" id="code" />
-            </div>
-            <input type="text" placeholder="Phone (optional)" id="phone" />
-            <div className="radio">
+            <div className="radio--save">
               <input type="radio" id="" />
               <span style={{ color: "#fff " }}>
                 Save this information for next time
@@ -65,7 +59,7 @@ const PayStack = () => {
             onClick={() => navigate(-1)}
             style={{
               cursor: "pointer",
-              marginLeft: "-70px",
+              marginLeft: "-60px",
               marginTop: "10px",
               color: "blue",
             }}

@@ -30,9 +30,7 @@ const OnlinePayment = ({ collection }: any) => {
         <div className="pro--list">
           {progress.map((p, id) => (
             <div key={id}>
-              <li>
-                <p>{p.name}&gt;</p>
-              </li>
+              <p>{p.name}&gt;</p>
             </div>
           ))}
         </div>

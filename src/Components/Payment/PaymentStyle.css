@@ -1,4 +1,5 @@
 .payment {
+  width: auto;
   height: auto;
   display: flex;
   justify-content: center;
@@ -27,6 +28,9 @@ li {
 .pro--list {
   display: flex;
   flex-direction: row;
+  gap: 20px;
+  justify-content: flex-start;
+  color: #fff;
 }
 
 .paypal--img {
@@ -40,21 +44,58 @@ li {
   position: relative;
 }
 
-@media (max-width: 420px) {
+/* @media (max-width: 420px) {
+  
+} */
+
+@media only screen and (min-width: 1281px) {
+  .quiz-container {
+    background: #fad9d9;
+    width: 800px;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .quiz-container {
+    background: #0b008a;
+    width: 450px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .quiz-container {
+    background: rgb(19, 55, 217);
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .quiz-container {
+    background: #9c9c9c;
+    width: 350px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .payment {
+    /* width: auto; */
+  }
+
   .title {
-    margin: 40px 15px;
-    font-size: 32px;
+    font-size: 36px;
     color: #fff;
   }
 
   .pro--list {
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    margin-top: 25px;
   }
 
   .pay--info {
     text-align: center;
+    width: 410px;
+    margin: 0 auto;
     font-size: 20px;
   }
 
