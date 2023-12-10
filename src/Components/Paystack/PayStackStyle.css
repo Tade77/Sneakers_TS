@@ -101,9 +101,14 @@
 
 @media only screen and (max-width: 768px) {
   #contact {
-    width: 350px;
-    margin-left: 55px;
+    width: 500px;
   }
+
+  .contact--header {
+    margin-left: -350px;
+  }
+
+
 }
 
 @media only screen and (max-width: 640px) {

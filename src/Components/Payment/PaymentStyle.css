@@ -69,12 +69,7 @@ li {
   }
 }
 
-@media only screen and (max-width: 768px) {
-  .quiz-container {
-    background: #9c9c9c;
-    width: 350px;
-  }
-}
+@media only screen and (max-width: 768px) {}
 
 @media only screen and (max-width: 640px) {
   .payment {
