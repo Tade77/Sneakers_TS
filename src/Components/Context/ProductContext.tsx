@@ -23,6 +23,7 @@ type productContextType = {
   setEmail: (value: string) => void;
   setPassword: (value: string) => void;
   addCart: number;
+  setAddCart: (value: number) => void;
   productQuantity: () => void;
 };
 const ProductContext = createContext({} as productContextType);

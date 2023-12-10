@@ -7,6 +7,7 @@ import { useProduct } from "../Context/ProductContext";
 const SneakerDetails = () => {
   const { sneakId } = useParams();
   const navigate = useNavigate();
+  const { productQuantity } = useProduct();
 
   const viewProduct = collections.find(
     (collection) => collection.id === Number(sneakId)
@@ -46,7 +47,9 @@ const SneakerDetails = () => {
           </div>
 
           <div className="btns">
-            <button className="btn--cart">ADD TO CART</button>
+            <button onClick={productQuantity} className="btn--cart">
+              ADD TO CART
+            </button>
             <button
               onClick={() => navigate("/online-payment")}
               className="btn--buy"

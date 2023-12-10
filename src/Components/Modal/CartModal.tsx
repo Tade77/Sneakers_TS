@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import "./Modal.css";
 import { useProduct } from "../Context/ProductContext";
-import { products } from "../../Data";
 
 type cartModType = {
   setOpenCart: (value: boolean) => void;
 };
 const CartModal = ({ setOpenCart }: cartModType) => {
+  const { addCart, setAddCart } = useProduct();
+  const deleteCart = () => {
+    setAddCart(0);
+  };
   return (
     <div className="cart--modal">
       <div className="close" onClick={() => setOpenCart(false)}>
@@ -18,12 +21,12 @@ const CartModal = ({ setOpenCart }: cartModType) => {
       <hr />
       <div className="cart--wrapper">
         <div>
-          <p style={{ color: "#696a6e" }}>Full limited edition sneaker</p>
+          <p style={{ color: "#696a6e" }}>Number of items selected:</p>
           <p style={{ color: "#696a6e" }}>
-            x 5<span style={{ fontWeight: 700, color: "black" }}>= 39</span>
+            <span style={{ fontWeight: 700, color: "black" }}>= {addCart}</span>
           </p>
         </div>
-        <div>
+        <div onClick={deleteCart}>
           <img src="/icon-delete.svg" alt="" />
         </div>
       </div>
