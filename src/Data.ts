@@ -31,8 +31,8 @@ export const navItems = [
   },
   {
     id: 2,
-    name: "Men",
-    path: "/men",
+    name: "Wishlist",
+    path: "/wishlist",
   },
   {
     id: 3,

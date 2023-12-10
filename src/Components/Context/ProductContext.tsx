@@ -22,6 +22,8 @@ type productContextType = {
   password: string;
   setEmail: (value: string) => void;
   setPassword: (value: string) => void;
+  addCart: number;
+  productQuantity: () => void;
 };
 const ProductContext = createContext({} as productContextType);
 
@@ -37,6 +39,7 @@ export const ProductContextProvider = ({
 }: ProductContextProviderProps) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [addCart, setAddCart] = useState(0);
   const userModel = pb.authStore.model as any;
 
   const login = useCallback(async (email: string, password: string) => {
@@ -70,8 +73,14 @@ export const ProductContextProvider = ({
     const record = await pb.collection("users").create(data);
     console.log(record);
   };
+  const productQuantity = () => {
+    setAddCart((prev) => prev + 1);
+  };
 
   const context = {
+    addCart: addCart,
+    setAddCart: setAddCart,
+    productQuantity: productQuantity,
     login: login,
     logout: logout,
     setEmail: setEmail,

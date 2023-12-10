@@ -5,7 +5,6 @@ import Home from "./Pages/Women";
 import Women from "./Pages/Women";
 import NavBar from "./Components/Navs/NavBar";
 import Collection from "./Pages/Collection/Collection";
-import Men from "./Pages/Men";
 import About from "./Pages/AboutFile/About";
 import Contact from "./Pages/contact/Contact";
 import Preview from "./Components/Preview";
@@ -14,6 +13,7 @@ import OnlinePayment from "./Components/Payment/OnlinePayment";
 import Footer from "./Components/Footer/Footer";
 import SignUp from "./Pages/Register/SignUp";
 import LoginPage from "./Pages/Home/Login";
+import WishList from "./Pages/Men";
 
 function App() {
   const [openModal, setOpenModal] = useState(false);
@@ -28,7 +28,7 @@ function App() {
         <Route index path="/" element={<Collection />} />
         <Route path="/:sneakId" element={<SneakerDetails />} />
         <Route path="/online-payment" element={<OnlinePayment />} />
-        <Route path="/men" element={<Men />} />
+        <Route path="/men" element={<WishList />} />
         <Route
           path="/women"
           element={<Women openModal={openModal} setOpenModal={setOpenModal} />}

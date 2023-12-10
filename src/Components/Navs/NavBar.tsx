@@ -11,8 +11,7 @@ const NavBar = () => {
   const [userModal, setUserModal] = useState(false);
   const [mobile, setMobile] = useState(false);
   const [openCart, setOpenCart] = useState(false);
-  const [addCart, setAddCart] = useState(0);
-
+  const { addCart } = useProduct();
   const activeStyle = ({ isActive }: any) => {
     return {
       color: isActive ? "#ff7d1b" : "black",
