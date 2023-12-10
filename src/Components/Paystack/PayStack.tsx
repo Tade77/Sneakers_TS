@@ -10,11 +10,7 @@ const PayStack = () => {
   return (
     <div className="payStack-container">
       <section>
-        <h2
-          style={{ color: "white", marginBottom: "10px", marginLeft: "-190px" }}
-        >
-          Contact
-        </h2>
+        <h2 className="contact--header">Contact</h2>
         <div className="pay--form">
           <div className="contact--form">
             <input type="text" placeholder="email" id="contact" />
@@ -24,15 +20,7 @@ const PayStack = () => {
                 Email me with news and offers
               </span>
             </div>
-            <h2
-              style={{
-                color: "white",
-                marginBottom: "-10px",
-                marginLeft: "-130px",
-              }}
-            >
-              Shipping Address
-            </h2>
+            <h2 className="shipping--header">Shipping Address</h2>
             <div className="shipping--info">
               <div className="shipping">
                 <Country />
@@ -59,7 +47,7 @@ const PayStack = () => {
             onClick={() => navigate(-1)}
             style={{
               cursor: "pointer",
-              marginLeft: "-60px",
+              marginLeft: "-70px",
               marginTop: "10px",
               color: "blue",
             }}

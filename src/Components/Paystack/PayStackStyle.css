@@ -10,12 +10,24 @@
   gap: 20px;
 }
 
+.contact--header {
+  color: white;
+  margin-bottom: 10px;
+  margin-left: -355px;
+}
+
 .shipping--info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+
+.shipping--header {
+  color: #fff;
+  margin-bottom: -10px;
+  margin-left: -290px;
 }
 
 .radio {
@@ -39,11 +51,6 @@
   margin-bottom: 50px;
 }
 
-.bio {
-  display: flex;
-  gap: 20px;
-  flex-direction: row;
-}
 
 .province {
   display: flex;
@@ -92,10 +99,26 @@
   transition: background-color 1s ease;
 }
 
+@media only screen and (max-width: 768px) {
+  #contact {
+    width: 350px;
+    margin-left: 55px;
+  }
+}
+
 @media only screen and (max-width: 640px) {
   .contact--form {
+    display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .contact--header {
+    margin-left: -190px;
+  }
+
+  .shipping--header {
+    margin-left: -130px;
   }
 
   #state,
@@ -131,8 +154,6 @@
   .province {
     display: flex;
     flex-direction: column;
-    /* justify-content: flex-start;
-    align-items: flex-start; */
     gap: 20px;
     margin: auto 0;
   }
