@@ -77,7 +77,6 @@ select {
     flex-direction: column;
     margin: 30px 0;
     gap: 5px;
-    border: 2px solid gray;
   }
 
   .shoe--img {

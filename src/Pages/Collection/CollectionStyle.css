@@ -7,6 +7,7 @@
   border-radius: 5px;
   margin-top: 50px;
 }
+
 .col {
   display: flex;
   flex-direction: column;
@@ -19,24 +20,29 @@
   background-color: #ff7d1b;
   transition: 0.5s ease;
 }
+
 .col:hover {
   box-shadow: 5px 5px 5px #efeff3;
   transform: scale(1.0055);
 }
+
 .collection--img {
   margin: -30px -30px;
   border-radius: 5px;
   height: 200px;
   width: 200px;
 }
+
 .name-price {
   text-align: center;
   color: white;
   margin: -20px 0;
 }
+
 .price {
   color: #fff;
 }
+
 .order {
   border: 2px solid #fff;
   padding: 5px 50px;
@@ -45,6 +51,7 @@
   cursor: pointer;
   margin: -30px 0;
 }
+
 @media (max-width: 420px) {
   .collections--card {
     display: flex;
@@ -52,42 +59,51 @@
     justify-content: center;
     align-items: center;
   }
+
   .collection--img {
     height: 180px;
     width: 180px;
     margin-top: -15px;
     margin-bottom: 5px;
   }
+
   .col {
     height: 400px;
     width: 240px;
   }
+
   .order {
     border: 2px solid #fff;
     padding: 7px 30px;
     margin: -3px 0;
   }
+
   .name-price {
     margin: -20px 0;
   }
+
   .price {
     font-size: 22px;
     color: #fff;
     transform: translate(100px);
   }
 }
+
 @media (max-width: 760px) {
   .collections--card {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
+
   .price {
     transform: translate(-5px);
   }
+
   .order {
     margin: -3px 0;
   }
 }
+
 @media (min-width: 1024px) {
   .collections--card {
     grid-template-columns: repeat(4, 1fr);

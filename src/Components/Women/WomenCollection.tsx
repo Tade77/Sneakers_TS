@@ -7,38 +7,26 @@ import { useProduct } from "../Context/ProductContext";
 
 const WomenCollection = ({ setOpenModal, openModal }: modalType) => {
   return (
-    <div className={"pro-wrapper"}>
-      <aside className="product">
-        <img className="product--img" src="/image-product-1.jpg" alt="" />
-        <div className="img-thumb">
-          {products.map((product: productsType) => (
-            <Link to={`/women/${product.id}`}>
-              <img
-                key={product.id}
-                className="thumb"
-                onClick={() => setOpenModal(true)}
-                src={product.image}
-              />
-            </Link>
-          ))}
+    <div className={"product--container"}>
+      <aside className="product--wrapper">
+        <div className="product">
+          <img className="product--img" src="/image-product-1.jpg" alt="" />
+          <div className="img-thumb">
+            {products.map((product: productsType) => (
+              <div key={product.id}>
+                <Link to={`/women/${product.id}`}>
+                  <img
+                    className="thumb"
+                    onClick={() => setOpenModal(true)}
+                    src={product.image}
+                  />
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
       </aside>
       <aside className="call--action">
-        <p className="name">SNEAKER COMPANY</p>
-        <p className="header">Fall Limited Edition</p>
-        <span className="header">Sneaker</span>
-        <p className="desc">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt
-          architecto facere est error ratione incidunt a soluta adipisci fuga
-          quaerat quia voluptate tempora doloremque alias atque, eveniet quam
-          modi earum!
-        </p>
-        <p className="price">
-          $125.00 <span className="rating">50%</span>
-        </p>
-        <span className="bf--price">
-          <s>$250.00</s>
-        </span>
         <div className="select">
           <div className="counter">
             <img onClick={() => ""} src="/icon-minus.svg" alt="" />
