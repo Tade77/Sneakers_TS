@@ -5,14 +5,14 @@ import {
   useContext,
   useState,
 } from "react";
-import { products } from "../../Data";
+import { collections } from "../../Data";
 import { pb } from "../../Pocketbase";
 import { useNavigate } from "react-router-dom";
 import { userType } from "../../type";
 
 type cartItem = {
   id: number;
-  addCart: number;
+  quantity: number;
 };
 
 type productContextType = {
@@ -41,6 +41,9 @@ export const ProductContextProvider = ({
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [addCart, setAddCart] = useState(0);
+  const [items, setItems] = useState<cartItem[]>([]);
+  console.log(items);
+
   const userModel = pb.authStore.model as any;
 
   const login = useCallback(async (email: string, password: string) => {
@@ -72,9 +75,8 @@ export const ProductContextProvider = ({
     };
 
     const record = await pb.collection("users").create(data);
-    console.log(record);
   };
-  const productQuantity = () => {
+  const productQuantity = (id: number) => {
     setAddCart((prev) => prev + 1);
   };
 

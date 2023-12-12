@@ -52,7 +52,7 @@ export const navItems = [
 export const collections = [
   {
     id: 1,
-    name: "MAFEKE Mens Air Running Shoes Lightweight Athletic Tennis",
+    name: "MAFEKE Lightweight Athletic Tennis",
     image: "/Men/MAFEKE Mens Air Running Shoes Lightweight Athletic Tennis.jpg",
     price: "#45,000",
   },
@@ -64,25 +64,25 @@ export const collections = [
   },
   {
     id: 3,
-    name: "Mens Running Shoes Slip-on Walking Tennis Sneakers",
+    name: "Mens Slip-on Sneakers",
     image: "/Men/Mens Running Shoes Slip-on Walking Tennis Sneakers.jpg",
     price: "#25,000",
   },
   {
     id: 4,
-    name: "Casbeam Men's Running Knit Comfortable Lightweight",
+    name: "Casbeam Comfortable Lightweight",
     image: "/Men/Casbeam Men's Running Knit Comfortable Lightweight.jpg",
     price: "#33,000",
   },
   {
     id: 5,
-    name: "JBB Womens Fashion Sneakers",
+    name: "JBB Womens Sneakers",
     image: "/Men/JBB Womens Fashion Sneakers.jpg",
     price: "#18,500",
   },
   {
     id: 6,
-    name: "Zivopah Mens Running Shoes",
+    name: "Zivopah Mens Shoes",
     image: "/Men/Zivopah Mens Running Shoes.jpg",
     price: "#42,000",
   },
@@ -112,25 +112,25 @@ export const collections = [
   },
   {
     id: 11,
-    name: "White Black Kyle Graphic Print Italian Leather ",
+    name: "White Black Kyle Italian Leather ",
     image: "/Women/female.jpeg",
     price: "#22,500",
   },
   {
     id: 12,
-    name: "White Arden Studded Velour Italian Leather Unisex ",
+    name: "White Arden Italian Leather Unisex ",
     image: "/Women/fs.jpeg",
     price: "#62,000",
   },
   {
     id: 13,
-    name: "Black April Studded Suede Tuscany Leather ",
+    name: "Black April Suede Tuscany Leather ",
     image: "/Women/Women Cotton Warm Sneakers.jpg",
     price: "#65,200",
   },
   {
     id: 14,
-    name: "Lilac Rory Studded Velour Italian Leather Unisex ",
+    name: "Lilac Rory Italian Leather Unisex ",
     image: "/Women/fs.jpeg",
     price: "#73,200",
   },
@@ -154,7 +154,7 @@ export const collections = [
   },
   {
     id: 18,
-    name: "Gray Ozie Graphic Print Italian Leather Unisex Sneakers",
+    name: "Gray Ozie Italian Leather Unisex Sneakers",
     image: "/Women/female.jpeg",
     price: "#44,000",
   },
@@ -166,7 +166,7 @@ export const collections = [
   },
   {
     id: 20,
-    name: "adidas Originals Men's Smooth Runner Sneaker",
+    name: "Adidas Originals Men's Smooth Runner Sneaker",
     image: "/Women/adidas.jpg",
     price: "#22,000",
   },
